@@ -3,197 +3,196 @@
 // { fach: "...", schwierigkeit: "...", question: "...", options: ["..."], correct: [...], explanation: "..." }
 
 const alleQuizFragen = [
-[
     // ==========================================
     // SUBJECT: ENGLISH (Business Communication)
     // ==========================================
 
     // --- ENGLISH: Easy ---
     {
-        "fach": "english",
-        "schwierigkeit": "easy",
-        "question": "According to the document, what is the general tone of business apologies?",
-        "options": [
+        fach: "english",
+        schwierigkeit: "easy",
+        question: "According to the document, what is the general tone of business apologies?",
+        options: [
             "They are always fairly formal.",
             "They should be very informal to build trust.",
             "They are strictly legal and written by lawyers.",
             "They should be casual and brief."
         ],
-        "correct": [0],
-        "explanation": "The document explicitly states right at the beginning: 'Please keep in mind that apologies are always fairly formal.'"
+        correct: [0],
+        explanation: "The document explicitly states right at the beginning: 'Please keep in mind that apologies are always fairly formal.'"
     },
     {
-        "fach": "english",
-        "schwierigkeit": "easy",
-        "question": "Which of the following phrases belong to the 'Apologize' category? (Select all that apply)",
-        "options": [
+        fach: "english",
+        schwierigkeit: "easy",
+        question: "Which of the following phrases belong to the 'Apologize' category? (Select all that apply)",
+        options: [
             "Please accept my sincere / our deepest apologies for…",
             "The error was due to…",
             "I would like to express my deep regrets for…",
             "I can promise you that the highest quality standards will be met…"
         ],
-        "correct": [0, 2],
-        "explanation": "'Please accept my sincere... apologies' and 'I would like to express my deep regrets for...' are listed under the 'Apologize' section. 'The error was due to...' is an 'Explain' phrase, and 'I can promise you...' is a 'Promise' phrase."
+        correct: [0, 2],
+        explanation: "'Please accept my sincere... apologies' and 'I would like to express my deep regrets for...' are listed under the 'Apologize' section. 'The error was due to...' is an 'Explain' phrase, and 'I can promise you...' is a 'Promise' phrase."
     },
     {
-        "fach": "english",
-        "schwierigkeit": "easy",
-        "question": "If you need to apologize for an omission or something you forgot to do, which phrase from the 'Apologize' list is the most appropriate?",
-        "options": [
+        fach: "english",
+        schwierigkeit: "easy",
+        question: "If you need to apologize for an omission or something you forgot to do, which phrase from the 'Apologize' list is the most appropriate?",
+        options: [
             "I apologize for my failure to…",
             "I can appreciate that.",
             "I see your point.",
             "Thank you for pointing that out."
         ],
-        "correct": [0],
-        "explanation": "'I apologize for my failure to…' is explicitly listed under 'Apologize' and is perfectly suited for an omission."
+        correct: [0],
+        explanation: "'I apologize for my failure to…' is explicitly listed under 'Apologize' and is perfectly suited for an omission."
     },
     {
-        "fach": "english",
-        "schwierigkeit": "easy",
-        "question": "Which of these phrases is the correct way to apologize on behalf of your entire organization?",
-        "options": [
+        fach: "english",
+        schwierigkeit: "easy",
+        question: "Which of these phrases is the correct way to apologize on behalf of your entire organization?",
+        options: [
             "My bad for the company.",
             "I would like to apologize on behalf of our company.",
             "The company is fairly formal.",
             "We are convinced that the changes we have implemented..."
         ],
-        "correct": [1],
-        "explanation": "The exact phrase provided in the document for this situation is 'I would like to apologize on behalf of our company.'"
+        correct: [1],
+        explanation: "The exact phrase provided in the document for this situation is 'I would like to apologize on behalf of our company.'"
     },
 
     // --- ENGLISH: Medium ---
     {
-        "fach": "english",
-        "schwierigkeit": "medium",
-        "question": "Which of the following elements are required for a 'perfect business apology' according to the text? (Select all that apply)",
-        "options": [
+        fach: "english",
+        schwierigkeit: "medium",
+        question: "Which of the following elements are required for a 'perfect business apology' according to the text? (Select all that apply)",
+        options: [
             "Blame external factors for the issue",
             "Take responsibility",
             "Provide a form of restitution (if possible)",
             "Keep the account of the situation as brief as possible"
         ],
-        "correct": [1, 2],
-        "explanation": "A perfect business apology includes 'take responsibility' and 'provide a form of restitution (if possible)'. It also states you should give a 'detailed account' (not brief) and 'recognize your/the company’s role' (instead of blaming external factors)."
+        correct: [1, 2],
+        explanation: "A perfect business apology includes 'take responsibility' and 'provide a form of restitution (if possible)'. It also states you should give a 'detailed account' (not brief) and 'recognize your/the company’s role' (instead of blaming external factors)."
     },
     {
-        "fach": "english",
-        "schwierigkeit": "medium",
-        "question": "Which phrase should you use if you want to 'Acknowledge/recognize' the impact of your actions on the other party?",
-        "options": [
+        fach: "english",
+        schwierigkeit: "medium",
+        question: "Which phrase should you use if you want to 'Acknowledge/recognize' the impact of your actions on the other party?",
+        options: [
             "In our efforts to optimize our distribution process, we overlooked…",
             "I understand that our actions meant…",
             "We will be increasing our efforts when it comes to…",
             "Please allow me to apologize for…"
         ],
-        "correct": [1],
-        "explanation": "'I understand that our actions meant…' is categorized specifically under 'Acknowledge/recognize' to validate the other party's experience."
+        correct: [1],
+        explanation: "'I understand that our actions meant…' is categorized specifically under 'Acknowledge/recognize' to validate the other party's experience."
     },
     {
-        "fach": "english",
-        "schwierigkeit": "medium",
-        "question": "To properly 'Explain' what went wrong without making it sound like a cheap excuse, which phrasing does the document suggest?",
-        "options": [
+        fach: "english",
+        schwierigkeit: "medium",
+        question: "To properly 'Explain' what went wrong without making it sound like a cheap excuse, which phrasing does the document suggest?",
+        options: [
             "I am particularly sorry for…",
             "We appreciate that this caused you inconvenience…",
             "In our efforts to optimize our distribution process, we overlooked…",
             "I will let my manager know how you feel…"
         ],
-        "correct": [2],
-        "explanation": "'In our efforts to optimize our distribution process, we overlooked…' is listed under the 'Explain' category to professionally state how the error occurred."
+        correct: [2],
+        explanation: "'In our efforts to optimize our distribution process, we overlooked…' is listed under the 'Explain' category to professionally state how the error occurred."
     },
     {
-        "fach": "english",
-        "schwierigkeit": "medium",
-        "question": "According to the bullet points of a perfect apology, what should you do regarding your involvement in the problem?",
-        "options": [
+        fach: "english",
+        schwierigkeit: "medium",
+        question: "According to the bullet points of a perfect apology, what should you do regarding your involvement in the problem?",
+        options: [
             "Deny any involvement if possible.",
             "Recognize your/the company’s role in the situation.",
             "Wait for the customer to prove your involvement.",
             "State that your role was minor."
         ],
-        "correct": [1],
-        "explanation": "One of the key bullet points for a perfect apology is to 'recognize your/the company’s role in the situation'."
+        correct: [1],
+        explanation: "One of the key bullet points for a perfect apology is to 'recognize your/the company’s role in the situation'."
     },
     {
-        "fach": "english",
-        "schwierigkeit": "medium",
-        "question": "Which phrase demonstrates that you did not realize the consequences of your actions beforehand?",
-        "options": [
+        fach: "english",
+        schwierigkeit: "medium",
+        question: "Which phrase demonstrates that you did not realize the consequences of your actions beforehand?",
+        options: [
             "I am sorry. I did not mean to..",
             "I can imagine that you felt like…",
             "(I am) sorry. I did not realize the impact of…",
             "I am / we are terribly sorry about that."
         ],
-        "correct": [2],
-        "explanation": "The phrase '(I am) sorry. I did not realize the impact of…' from the 'Apologize' section specifically addresses a lack of prior awareness regarding the consequences."
+        correct: [2],
+        explanation: "The phrase '(I am) sorry. I did not realize the impact of…' from the 'Apologize' section specifically addresses a lack of prior awareness regarding the consequences."
     },
 
     // --- ENGLISH: Hard ---
     {
-        "fach": "english",
-        "schwierigkeit": "hard",
-        "question": "How do phrases from the 'Explain' category differ from the 'Promise' category based on the provided text?",
-        "options": [
+        fach: "english",
+        schwierigkeit: "hard",
+        question: "How do phrases from the 'Explain' category differ from the 'Promise' category based on the provided text?",
+        options: [
             "'Explain' phrases offer financial compensation, while 'Promise' phrases focus on past events.",
             "'Explain' phrases describe the cause of the issue (e.g., 'The defect was caused by...'), while 'Promise' phrases focus on future improvements and solutions.",
             "'Explain' phrases are informal, while 'Promise' phrases are highly formal.",
             "There is no difference; they can be used interchangeably in the apology."
         ],
-        "correct": [1],
-        "explanation": "'Explain' phrases like 'The defect was caused by...' deal with the reasons behind an error. 'Promise' phrases like 'In the future, our focus will be...' or 'We have increased our efforts to ensure that...' deal with preventing recurrence and finding solutions."
+        correct: [1],
+        explanation: "'Explain' phrases like 'The defect was caused by...' deal with the reasons behind an error. 'Promise' phrases like 'In the future, our focus will be...' or 'We have increased our efforts to ensure that...' deal with preventing recurrence and finding solutions."
     },
     {
-        "fach": "english",
-        "schwierigkeit": "hard",
-        "question": "Providing 'a form of restitution' is part of a perfect apology. Which of the following phrases from the 'Promise' category are practical examples of offering restitution or a direct solution to the affected party? (Select all that apply)",
-        "options": [
+        fach: "english",
+        schwierigkeit: "hard",
+        question: "Providing 'a form of restitution' is part of a perfect apology. Which of the following phrases from the 'Promise' category are practical examples of offering restitution or a direct solution to the affected party? (Select all that apply)",
+        options: [
             "Here are some vouchers for lunch for any trouble we may have caused you.",
             "We are convinced that the changes we have implemented will prevent this...",
             "I am going to see how we can make this better for you.",
             "I am / we are terribly sorry about that."
         ],
-        "correct": [0, 2],
-        "explanation": "Offering vouchers ('Here are some vouchers...') and actively looking for ways to improve the customer's specific situation ('I am going to see how we can make this better...') are concrete forms of restitution and solution-finding listed under the 'Promise' section."
+        correct: [0, 2],
+        explanation: "Offering vouchers ('Here are some vouchers...') and actively looking for ways to improve the customer's specific situation ('I am going to see how we can make this better...') are concrete forms of restitution and solution-finding listed under the 'Promise' section."
     },
     {
-        "fach": "english",
-        "schwierigkeit": "hard",
-        "question": "In the context of the document, which category does the phrase 'As a result of our decision, our relationship was affected…' belong to, and what is its purpose?",
-        "options": [
+        fach: "english",
+        schwierigkeit: "hard",
+        question: "In the context of the document, which category does the phrase 'As a result of our decision, our relationship was affected…' belong to, and what is its purpose?",
+        options: [
             "Apologize: It serves to formally ask for forgiveness.",
             "Promise: It guarantees that relationships will not be damaged in the future.",
             "Explain: It provides a technical reason for a distribution failure.",
             "Acknowledge/recognize: It validates the negative impact the company's actions had on the business relationship."
         ],
-        "correct": [3],
-        "explanation": "This phrase is listed under 'Acknowledge/recognize'. Its purpose is to show the other party that you understand the emotional or professional damage caused by your decisions."
+        correct: [3],
+        explanation: "This phrase is listed under 'Acknowledge/recognize'. Its purpose is to show the other party that you understand the emotional or professional damage caused by your decisions."
     },
     {
-        "fach": "english",
-        "schwierigkeit": "hard",
-        "question": "If a customer is very upset and you need to escalate the issue internally while assuring the customer you are taking it seriously, which 'Promise' phrase is best?",
-        "options": [
+        fach: "english",
+        schwierigkeit: "hard",
+        question: "If a customer is very upset and you need to escalate the issue internally while assuring the customer you are taking it seriously, which 'Promise' phrase is best?",
+        options: [
             "I will let my manager know how you feel, and let’s see if we can find a solution.",
             "We see that our actions impacted you unnecessarily…",
             "In the future, our focus will be on…, so that this situation will not repeat itself.",
             "I am going to see how we can make this better for you."
         ],
-        "correct": [0],
-        "explanation": "The phrase 'I will let my manager know how you feel, and let’s see if we can find a solution.' directly involves escalating the emotional impact to management to seek a resolution, as listed under the 'Promise' category."
+        correct: [0],
+        explanation: "The phrase 'I will let my manager know how you feel, and let’s see if we can find a solution.' directly involves escalating the emotional impact to management to seek a resolution, as listed under the 'Promise' category."
     },
     {
-        "fach": "english",
-        "schwierigkeit": "hard",
-        "question": "Which of these combinations correctly pairs a bullet point from 'The perfect apology' checklist with an appropriate matching phrase from the document?",
-        "options": [
+        fach: "english",
+        schwierigkeit: "hard",
+        question: "Which of these combinations correctly pairs a bullet point from 'The perfect apology' checklist with an appropriate matching phrase from the document?",
+        options: [
             "'give a detailed account of the situation' -> 'Thank you for pointing that out.'",
             "'acknowledge the hurt or damage done' -> 'I can imagine that you felt like…'",
             "'promise that it won’t happen again' -> 'The error was due to…'",
             "'provide a form of restitution' -> 'Please accept my apologies.'"
         ],
-        "correct": [1],
-        "explanation": "The phrase 'I can imagine that you felt like…' matches the checklist item 'acknowledge the hurt or damage done' by validating the other person's emotional response. The other pairings mismatch the checklist intent with the phrase's category."
+        correct: [1],
+        explanation: "The phrase 'I can imagine that you felt like…' matches the checklist item 'acknowledge the hurt or damage done' by validating the other person's emotional response. The other pairings mismatch the checklist intent with the phrase's category."
     },
 
     // ==========================================
@@ -263,7 +262,6 @@ const alleQuizFragen = [
         correct: [0, 1],
         explanation: "SY-SUBRC liefert 0, wenn Daten gefunden wurden. SY-DBCNT enthält die Anzahl der gelesenen/verarbeiteten Zeilen. SY-TABIX ist für interne Tabellen relevant, nicht für Datenbank-SELECTs."
     },
-
 
     // ==========================================
     // FACH: JAVA (java)
@@ -343,136 +341,135 @@ const alleQuizFragen = [
         explanation: "RuntimeExceptions (Unchecked) müssen im Gegensatz zu Checked Exceptions nicht zwingend abgefangen oder deklariert werden. Werden sie geworfen und nicht gefangen, bricht das Programm ab."
     },
     {
-        "fach": "java",
-        "schwierigkeit": "mittel",
-        "question": "Was bedeutet das Single Responsibility Principle (SRP) in der Praxis?",
-        "options": [
+        fach: "java",
+        schwierigkeit: "mittel",
+        question: "Was bedeutet das Single Responsibility Principle (SRP) in der Praxis?",
+        options: [
             "Eine Klasse sollte nur eine einzige Instanz zur Laufzeit haben.",
             "Eine Klasse sollte exakt einen klar definierten Verantwortungsbereich haben.",
             "Eine Methode darf nur eine einzige Aufgabe ausführen, Klassen dürfen jedoch mehrere haben.",
             "Eine Klasse sollte nur einen einzigen Grund zur Änderung aufweisen."
         ],
-        "correct": [1, 3],
-        "explanation": "Das SRP besagt, dass eine Klasse genau einen Verantwortungsbereich und damit nur einen Grund zur Änderung haben darf. Die Beschränkung auf eine Instanz beschreibt das Singleton-Pattern, nicht SRP."
+        correct: [1, 3],
+        explanation: "Das SRP besagt, dass eine Klasse genau einen Verantwortungsbereich und damit nur einen Grund zur Änderung haben darf. Die Beschränkung auf eine Instanz beschreibt das Singleton-Pattern, nicht SRP."
     },
     {
-        "fach": "java",
-        "schwierigkeit": "schwer",
-        "question": "Welche architektonischen Aussagen treffen auf das Liskovsche Substitutionsprinzip (LSP) zu?",
-        "options": [
+        fach: "java",
+        schwierigkeit: "schwer",
+        question: "Welche architektonischen Aussagen treffen auf das Liskovsche Substitutionsprinzip (LSP) zu?",
+        options: [
             "Objekte einer Basisklasse müssen durch Objekte ihrer Kindklassen ersetzbar sein, ohne unerwartetes Verhalten auszulösen.",
             "Tiefe Vererbungshierarchien sollten stets durch Interfaces ersetzt werden.",
             "Die Kindklasse muss den 'Vertrag' der Elternklasse vollständig erfüllen.",
             "Eine Kindklasse darf geerbte Methoden ignorieren (z.B. durch leere Rümpfe), wenn sie diese funktional nicht benötigt."
         ],
-        "correct": [0, 2],
-        "explanation": "Das LSP fordert, dass abgeleitete Klassen ihre Basisklassen fehlerfrei ersetzen können. Werden geerbte Methoden ignoriert oder nicht vertragstreu implementiert, wird dieses Prinzip und damit die Polymorphie gebrochen."
+        correct: [0, 2],
+        explanation: "Das LSP fordert, dass abgeleitete Klassen ihre Basisklassen fehlerfrei ersetzen können. Werden geerbte Methoden ignoriert oder nicht vertragstreu implementiert, wird dieses Prinzip und damit die Polymorphie gebrochen."
     },
     {
-        "fach": "java",
-        "schwierigkeit": "leicht",
-        "question": "Welche Eigenschaften zeichnen den Datentyp 'Record' in Java aus?",
-        "options": [
+        fach: "java",
+        schwierigkeit: "leicht",
+        question: "Welche Eigenschaften zeichnen den Datentyp 'Record' in Java aus?",
+        options: [
             "Records generieren im Hintergrund automatisch Konstruktoren sowie Getter und Setter.",
             "Records sind nach der Instanziierung strikt unveränderlich (immutable).",
             "Records eignen sich primär als reine Datenträger und eliminieren Boilerplate-Code.",
             "Records können durch Vererbung beliebig erweitert werden."
         ],
-        "correct": [1, 2],
-        "explanation": "Records sind immutable. Der Compiler generiert Konstruktor, Lesezugriffsmethoden (ohne 'get'-Präfix), equals(), hashCode() und toString(). Sie generieren ausdrücklich keine Setter."
+        correct: [1, 2],
+        explanation: "Records sind immutable. Der Compiler generiert Konstruktor, Lesezugriffsmethoden (ohne 'get'-Präfix), equals(), hashCode() und toString(). Sie generieren ausdrücklich keine Setter."
     },
     {
-        "fach": "java",
-        "schwierigkeit": "mittel",
-        "question": "Welche Prinzipien und Eigenschaften kennzeichnen eine REST-API korrekt?",
-        "options": [
+        fach: "java",
+        schwierigkeit: "mittel",
+        question: "Welche Prinzipien und Eigenschaften kennzeichnen eine REST-API korrekt?",
+        options: [
             "REST ist ein zustandsloses Architektur-Paradigma, kein eigenständiges Protokoll.",
             "Ein GET-Request wird genutzt, um serverseitige Zustände sicher zu verändern.",
             "Die Schnittstelle erzwingt eine strikte Trennung von Benutzeroberfläche (Client) und Datenspeicherung (Server).",
             "REST-APIs erfordern zwingend das Datenaustauschformat XML."
         ],
-        "correct": [0, 2],
-        "explanation": "REST entkoppelt Client und Server und speichert keine Sitzungszustände (Statelessness). GET-Requests dürfen keine Ressourcen verändern. Standard ist heute JSON, XML ist nicht zwingend."
+        correct: [0, 2],
+        explanation: "REST entkoppelt Client und Server und speichert keine Sitzungszustände (Statelessness). GET-Requests dürfen keine Ressourcen verändern. Standard ist heute JSON, XML ist nicht zwingend."
     },
     {
-        "fach": "java",
-        "schwierigkeit": "mittel",
-        "question": "Wie grenzen sich GET- und POST-Requests konzeptionell voneinander ab?",
-        "options": [
+        fach: "java",
+        schwierigkeit: "mittel",
+        question: "Wie grenzen sich GET- und POST-Requests konzeptionell voneinander ab?",
+        options: [
             "GET-Requests dienen ausschließlich dem Abrufen von Ressourcen und sind 'safe'.",
             "POST-Requests übertragen ihre Nutzdaten offen im Query-String der URL.",
             "POST-Requests dienen dem Senden neuer Daten an den Server.",
             "GET-Requests übertragen den Payload versteckt im Body des HTTP-Requests."
         ],
-        "correct": [0, 2],
-        "explanation": "GET liest Daten via URL-Parameter und ändert keinen Zustand. POST schreibt Daten und überträgt die Nutzlast (Payload) im unsichtbaren Body des HTTP-Requests."
+        correct: [0, 2],
+        explanation: "GET liest Daten via URL-Parameter und ändert keinen Zustand. POST schreibt Daten und überträgt die Nutzlast (Payload) im unsichtbaren Body des HTTP-Requests."
     },
     {
-        "fach": "java",
-        "schwierigkeit": "schwer",
-        "question": "Wie wird das Entwurfsmuster 'Command' architektonisch eingesetzt?",
-        "options": [
+        fach: "java",
+        schwierigkeit: "schwer",
+        question: "Wie wird das Entwurfsmuster 'Command' architektonisch eingesetzt?",
+        options: [
             "Es informiert abhängige Objekte automatisch über Zustandsänderungen.",
             "Es trennt den Aufrufer (Invoker) vom Empfänger (Receiver).",
             "Es lagert spezifische Algorithmen aus, um diese zur Laufzeit austauschen zu können.",
             "Es kapselt einen Befehl vollständig als eigenständiges Objekt und ermöglicht so Undo-Operationen."
         ],
-        "correct": [1, 3],
-        "explanation": "Das Command-Pattern kapselt Befehle als Objekte, was Warteschlangen oder Historien (Undo) erlaubt. Das Informieren von Objekten gehört zum Observer-Pattern, das Auslagern von Algorithmen zum Strategy-Pattern."
+        correct: [1, 3],
+        explanation: "Das Command-Pattern kapselt Befehle als Objekte, was Warteschlangen oder Historien (Undo) erlaubt. Das Informieren von Objekten gehört zum Observer-Pattern, das Auslagern von Algorithmen zum Strategy-Pattern."
     },
     {
-        "fach": "java",
-        "schwierigkeit": "mittel",
-        "question": "Was ist der definierte Zweck des Factory-Patterns?",
-        "options": [
+        fach: "java",
+        schwierigkeit: "mittel",
+        question: "Was ist der definierte Zweck des Factory-Patterns?",
+        options: [
             "Es garantiert, dass systemweit nur eine einzige Instanz einer Klasse existiert.",
             "Es entkoppelt den Aufrufer von der konkreten Implementierung der zu erstellenden Objekte.",
             "Es delegiert die direkte Instanziierung (new-Operator) an eine spezielle Fabrikmethode.",
             "Es schaltet sich transparent vor eine Klasse, um zur Laufzeit neues Verhalten hinzuzufügen."
         ],
-        "correct": [1, 2],
-        "explanation": "Die Factory übernimmt die Erzeugung von Objekten und vermeidet direkte new-Aufrufe im Client-Code. Eine einzige Instanz ist das Singleton-Pattern, das Vorschalten zur Laufzeit das Decorator-Pattern."
+        correct: [1, 2],
+        explanation: "Die Factory übernimmt die Erzeugung von Objekten und vermeidet direkte new-Aufrufe im Client-Code. Eine einzige Instanz ist das Singleton-Pattern, das Vorschalten zur Laufzeit das Decorator-Pattern."
     },
     {
-        "fach": "java",
-        "schwierigkeit": "mittel",
-        "question": "Was adressiert das Prinzip 'Composition Over Inheritance'?",
-        "options": [
+        fach: "java",
+        schwierigkeit: "mittel",
+        question: "Was adressiert das Prinzip 'Composition Over Inheritance'?",
+        options: [
             "Es löst das 'Fragile Base Class Problem' bei tiefen Vererbungshierarchien.",
             "Es besagt, dass Code-Duplikate in Basisklassen ausgelagert werden müssen (DRY).",
             "Es fordert, komplexes Verhalten durch die Zusammensetzung von Objekten zu erreichen, anstatt Klassen abzuleiten.",
             "Es erzwingt die Verwendung abstrakter Klassen anstelle von Interfaces."
         ],
-        "correct": [0, 2],
-        "explanation": "Vererbung führt oft zu extrem starrer Kopplung. Komposition nutzt Delegation an Teilobjekte, was flexibler ist und Seiteneffekte in tiefen Hierarchien ('Fragile Base Class') verhindert."
+        correct: [0, 2],
+        explanation: "Vererbung führt oft zu extrem starrer Kopplung. Komposition nutzt Delegation an Teilobjekte, was flexibler ist und Seiteneffekte in tiefen Hierarchien ('Fragile Base Class') verhindert."
     },
     {
-        "fach": "java",
-        "schwierigkeit": "leicht",
-        "question": "Welche Aussagen zu Datenaustauschformaten im Kontext von REST-Schnittstellen sind zutreffend?",
-        "options": [
+        fach: "java",
+        schwierigkeit: "leicht",
+        question: "Welche Aussagen zu Datenaustauschformaten im Kontext von REST-Schnittstellen sind zutreffend?",
+        options: [
             "JSON nutzt ein textbasiertes Schlüssel-Wert-System (Key-Value-Pairs).",
             "XML ist leichtgewichtiger und benötigt weniger Overhead beim Parsen als JSON.",
             "JSON ist heute das primär genutzte Datenaustauschformat für moderne REST-APIs.",
             "XML speichert Daten binär ab, um Bandbreite zu sparen."
         ],
-        "correct": [0, 2],
-        "explanation": "JSON ist das vorherrschende Format, da es textbasiert (Key-Value) und extrem leichtgewichtig ist. XML nutzt Tags, ist 'gesprächiger' (mehr Overhead) und rein textbasiert, nicht binär."
+        correct: [0, 2],
+        explanation: "JSON ist das vorherrschende Format, da es textbasiert (Key-Value) und extrem leichtgewichtig ist. XML nutzt Tags, ist 'gesprächiger' (mehr Overhead) und rein textbasiert, nicht binär."
     },
     {
-        "fach": "java",
-        "schwierigkeit": "leicht",
-        "question": "Wofür wird das Entwurfsmuster 'Singleton' verwendet?",
-        "options": [
+        fach: "java",
+        schwierigkeit: "leicht",
+        question: "Wofür wird das Entwurfsmuster 'Singleton' verwendet?",
+        options: [
             "Um sicherzustellen, dass von einer Klasse systemweit exakt eine einzige Instanz existiert.",
             "Um einen globalen Zugriffspunkt auf diese Instanz bereitzustellen.",
             "Um Klassen zur Laufzeit dynamisch um neue Funktionen zu dekorieren.",
             "Um Datentransferobjekte (DTOs) ohne Boilerplate-Code zu generieren."
         ],
-        "correct": [0, 1],
-        "explanation": "Singleton ist ein Erzeugungsmuster, das über einen privaten Konstruktor und eine statische getInstance()-Methode eine globale, einzigartige Instanz erzwingt."
+        correct: [0, 1],
+        explanation: "Singleton ist ein Erzeugungsmuster, das über einen privaten Konstruktor und eine statische getInstance()-Methode eine globale, einzigartige Instanz erzwingt."
     },
-
 
     // ==========================================
     // FACH: BWL (bwl)
@@ -551,7 +548,6 @@ const alleQuizFragen = [
         correct: [0],
         explanation: "Der Leverage-Effekt beschreibt die Hebelwirkung des Fremdkapitals auf die Eigenkapitalrentabilität. Voraussetzung: Die Investition bringt prozentual mehr ein (Gesamtkapitalrendite), als die Zinsen für das Darlehen kosten."
     },
-
 
     // ==========================================
     // FACH: DATENBANKEN (db)
