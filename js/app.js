@@ -48,8 +48,8 @@ function startQuiz() {
     const selectedDifficulty = difficultySelect.value;
 
     // Fragen filtern
-    currentQuestions = alleQuizFragen.filter(
-        q => q.fach === selectedSubject && q.schwierigkeit === selectedDifficulty
+currentQuestions = alleQuizFragen.filter(
+        q => q.fach === selectedSubject && (selectedDifficulty === 'alle' || q.schwierigkeit === selectedDifficulty)
     );
 
     if (currentQuestions.length === 0) {
