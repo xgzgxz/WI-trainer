@@ -10,7 +10,7 @@ const alleQuizFragen = [
     // --- ENGLISH: Easy ---
     {
         fach: "english",
-        schwierigkeit: "easy",
+        schwierigkeit: "leicht",
         question: "According to the document, what is the general tone of business apologies?",
         options: [
             "They are always fairly formal.",
@@ -23,7 +23,7 @@ const alleQuizFragen = [
     },
     {
         fach: "english",
-        schwierigkeit: "easy",
+        schwierigkeit: "leicht",
         question: "Which of the following phrases belong to the 'Apologize' category? (Select all that apply)",
         options: [
             "Please accept my sincere / our deepest apologies for…",
@@ -36,7 +36,7 @@ const alleQuizFragen = [
     },
     {
         fach: "english",
-        schwierigkeit: "easy",
+        schwierigkeit: "leicht",
         question: "If you need to apologize for an omission or something you forgot to do, which phrase from the 'Apologize' list is the most appropriate?",
         options: [
             "I apologize for my failure to…",
@@ -49,7 +49,7 @@ const alleQuizFragen = [
     },
     {
         fach: "english",
-        schwierigkeit: "easy",
+        schwierigkeit: "leicht",
         question: "Which of these phrases is the correct way to apologize on behalf of your entire organization?",
         options: [
             "My bad for the company.",
@@ -64,7 +64,7 @@ const alleQuizFragen = [
     // --- ENGLISH: Medium ---
     {
         fach: "english",
-        schwierigkeit: "medium",
+        schwierigkeit: "mittel",
         question: "Which of the following elements are required for a 'perfect business apology' according to the text? (Select all that apply)",
         options: [
             "Blame external factors for the issue",
@@ -77,7 +77,7 @@ const alleQuizFragen = [
     },
     {
         fach: "english",
-        schwierigkeit: "medium",
+        schwierigkeit: "mittel",
         question: "Which phrase should you use if you want to 'Acknowledge/recognize' the impact of your actions on the other party?",
         options: [
             "In our efforts to optimize our distribution process, we overlooked…",
@@ -90,7 +90,7 @@ const alleQuizFragen = [
     },
     {
         fach: "english",
-        schwierigkeit: "medium",
+        schwierigkeit: "mittel",
         question: "To properly 'Explain' what went wrong without making it sound like a cheap excuse, which phrasing does the document suggest?",
         options: [
             "I am particularly sorry for…",
@@ -103,7 +103,7 @@ const alleQuizFragen = [
     },
     {
         fach: "english",
-        schwierigkeit: "medium",
+        schwierigkeit: "mittel",
         question: "According to the bullet points of a perfect apology, what should you do regarding your involvement in the problem?",
         options: [
             "Deny any involvement if possible.",
@@ -116,7 +116,7 @@ const alleQuizFragen = [
     },
     {
         fach: "english",
-        schwierigkeit: "medium",
+        schwierigkeit: "mittel",
         question: "Which phrase demonstrates that you did not realize the consequences of your actions beforehand?",
         options: [
             "I am sorry. I did not mean to..",
@@ -131,7 +131,7 @@ const alleQuizFragen = [
     // --- ENGLISH: Hard ---
     {
         fach: "english",
-        schwierigkeit: "hard",
+        schwierigkeit: "schwer",
         question: "How do phrases from the 'Explain' category differ from the 'Promise' category based on the provided text?",
         options: [
             "'Explain' phrases offer financial compensation, while 'Promise' phrases focus on past events.",
@@ -144,7 +144,7 @@ const alleQuizFragen = [
     },
     {
         fach: "english",
-        schwierigkeit: "hard",
+        schwierigkeit: "schwer",
         question: "Providing 'a form of restitution' is part of a perfect apology. Which of the following phrases from the 'Promise' category are practical examples of offering restitution or a direct solution to the affected party? (Select all that apply)",
         options: [
             "Here are some vouchers for lunch for any trouble we may have caused you.",
@@ -157,7 +157,7 @@ const alleQuizFragen = [
     },
     {
         fach: "english",
-        schwierigkeit: "hard",
+        schwierigkeit: "schwer",
         question: "In the context of the document, which category does the phrase 'As a result of our decision, our relationship was affected…' belong to, and what is its purpose?",
         options: [
             "Apologize: It serves to formally ask for forgiveness.",
@@ -170,7 +170,7 @@ const alleQuizFragen = [
     },
     {
         fach: "english",
-        schwierigkeit: "hard",
+        schwierigkeit: "schwer",
         question: "If a customer is very upset and you need to escalate the issue internally while assuring the customer you are taking it seriously, which 'Promise' phrase is best?",
         options: [
             "I will let my manager know how you feel, and let’s see if we can find a solution.",
@@ -183,7 +183,7 @@ const alleQuizFragen = [
     },
     {
         fach: "english",
-        schwierigkeit: "hard",
+        schwierigkeit: "schwer",
         question: "Which of these combinations correctly pairs a bullet point from 'The perfect apology' checklist with an appropriate matching phrase from the document?",
         options: [
             "'give a detailed account of the situation' -> 'Thank you for pointing that out.'",
