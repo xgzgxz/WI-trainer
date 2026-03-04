@@ -19,24 +19,15 @@
             <div class="selection-group">
                 <label for="subject-select">Fach auswählen:</label>
                 <div class="select-wrapper">
-                    <select id="subject-select">
-                        <option value="bwl">BWL</option>
-                        <option value="java">JAVA</option>
-                        <option value="abap">ABAP mit SAP</option>
-                        <option value="db">Datenbanken</option>
-                        <option value="english">Englisch (Business)</option> </select>
-                    </select>
+                    <select id="subject-select"></select>
                 </div>
             </div>
 
             <div class="selection-group">
-                <label for="difficulty-select">Schwierigkeit:</label>
+                <label for="difficulty-select" id="difficulty-label">Schwierigkeit:</label>
                 <div class="select-wrapper">
                     <select id="difficulty-select">
-                        <option value="alle">Alle gemischt</option>
-                        <option value="leicht">Leicht</option>
-                        <option value="mittel">Mittel</option>
-                        <option value="schwer">Schwer</option>
+                        <!-- Optionen werden dynamisch gefüllt -->
                     </select>
                 </div>
             </div>
@@ -46,27 +37,45 @@
 
         <!-- QUIZBILDSCHIRM -->
         <div id="quiz-screen" class="screen hidden">
-            <div class="quiz-header">
-                <!-- GEÄNDERT: Zähler entfernt, nur noch Punkte -->
+             <div class="quiz-header">
                 <span id="score-display" class="badge">Punkte: 0</span>
                 <span id="questions-played" class="badge">Gespielt: 0</span>
             </div>
-            
             <h2 id="question-text" class="question-box">Hier steht gleich die Frage...</h2>
-            
-            <div id="options-container" class="options-grid">
-                <!-- Antwort-Buttons -->
-            </div>
-
+            <div id="options-container" class="options-grid"></div>
             <button id="check-btn" class="primary-btn hidden">Antwort prüfen</button>
-
-            <!-- GEÄNDERT: Feedback-Bereich mit "Beenden"-Button -->
             <div id="feedback-container" class="hidden">
                 <p id="feedback-text"></p>
                 <p id="explanation-text"></p>
                 <div style="display: flex; gap: 10px; margin-top: 20px;">
-                    <button id="end-btn" class="secondary-btn" style="background-color: var(--powder-blue); margin-top: 0;">Beenden</button>
-                    <button id="next-btn" class="primary-btn" style="margin-top: 0;">Nächste Frage</button>
+                    <button id="end-btn" class="secondary-btn">Beenden</button>
+                    <button id="next-btn" class="primary-btn">Nächste Frage</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- VOKABEL-BILDSCHIRM -->
+        <div id="vocab-screen" class="screen hidden">
+            <div class="quiz-header">
+                <span id="vocab-score-display" class="badge">Punkte: 0</span>
+                <span id="vocab-played-display" class="badge">Gelernt: 0 / 0</span>
+            </div>
+            
+            <div id="vocab-card" class="vocab-card">
+                <div class="card-face card-front">
+                    <p id="vocab-term">Englischer Begriff</p>
+                </div>
+                <div class="card-face card-back">
+                    <h3 id="vocab-translation">Deutsche Übersetzung</h3>
+                    <p id="vocab-example">Beispielsatz...</p>
+                </div>
+            </div>
+
+            <div id="vocab-feedback" class="hidden" style="margin-top: auto; text-align: center;">
+                <p style="margin-bottom: 15px; font-weight: bold;">Gewusst?</p>
+                <div style="display: flex; gap: 15px;">
+                    <button id="vocab-btn-no" class="secondary-btn vocab-eval-btn">Nein</button>
+                    <button id="vocab-btn-yes" class="primary-btn vocab-eval-btn">Ja</button>
                 </div>
             </div>
         </div>
@@ -81,9 +90,6 @@
         </div>
 
     </div>
-
-    <script src="js/fragen.js"></script>
-    <script src="js/app.js"></script>
+    <script type="module" src="js/app.js"></script>
 </body>
 </html>
-<!-- Trigger -->
