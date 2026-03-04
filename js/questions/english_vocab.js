@@ -45,7 +45,7 @@ export const questions = [
     { unit: 1, english: "generally", german: "im Allgemeinen", example: null },
     { unit: 1, english: "hardly ever", german: "fast nie, kaum", example: null },
     { unit: 1, english: "occasionally", german: "gelegentlich", example: null },
-    { unit: 1, english: "usually", german: "meistens, nomralerweise", example: null },
+    { unit: 1, english: "usually", german: "meistens, normalerweise", example: null },
     { unit: 1, english: "duty, duties", german: "Aufgabe(n), Pflicht(en)", example: null },
     { unit: 1, english: "supplier", german: "Zulieferer, Lieferant, Ausrüster", example: null },
     { unit: 1, english: "provider", german: "Anbieter", example: null },

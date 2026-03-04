@@ -43,7 +43,7 @@ let currentItems = [];
 let playedCount = 0;
 let score = 0;
 let currentItem;
-let selectedAnswerIndex = null;
+let selectedAnswers = [];
 let isVocabTransitioning = false; 
 
 // --- INITIALISIERUNG & UI-UPDATES ---
@@ -176,7 +176,7 @@ function loadNextQuestion() {
     }
     currentItem = currentItems[playedCount];
 
-    selectedAnswerIndex = null;
+    selectedAnswers = [];
     feedbackContainer.classList.add('hidden');
     checkBtn.classList.remove('hidden');
     checkBtn.disabled = true;
@@ -198,30 +198,50 @@ function loadNextQuestion() {
 
 // WIEDERHERGESTELLT: Logik zum Auswählen einer Option
 function toggleSelection(button, index) {
-    selectedAnswerIndex = index;
-    // Alle anderen Buttons deselektieren
-    document.querySelectorAll('.option-btn').forEach(btn => {
-        btn.classList.remove('selected');
-    });
-    // Den geklickten Button selektieren
-    button.classList.add('selected');
-    // Prüfen-Button aktivieren
-    checkBtn.disabled = false;
-    checkBtn.style.opacity = "1";
+    const answerPos = selectedAnswers.indexOf(index);
+   if (answerPos === -1) {
+        // Noch nicht ausgewählt -> hinzufügen
+        selectedAnswers.push(index);
+        button.classList.add('selected');
+    } else {
+        // Bereits ausgewählt -> wieder entfernen (Toggle)
+        selectedAnswers.splice(answerPos, 1);
+        button.classList.remove('selected');
+    }
+
+    // Prüfen-Button nur aktivieren, wenn mindestens eine Option gewählt ist
+    if (selectedAnswers.length > 0) {
+        checkBtn.disabled = false;
+        checkBtn.style.opacity = "1";
+    } else {
+        checkBtn.disabled = true;
+        checkBtn.style.opacity = "0.5";
+    }
 }
 
-// WIEDERHERGESTELLT: Logik zum Prüfen der Antwort
 function checkAnswer() {
     playedCount++;
-    const isCorrect = selectedAnswerIndex === currentItem.answer;
+    
+    // Die richtigen Antworten aus dem Fragen-Objekt laden (heißt "correct", nicht "answer")
+    const correctAnswers = currentItem.correct || [];
+
+    // Arrays sortieren und vergleichen, um zu prüfen, ob exakt die richtigen gewählt wurden
+    const sortedSelected = [...selectedAnswers].sort();
+    const sortedCorrect = [...correctAnswers].sort();
+    
+    const isCorrect = sortedSelected.length === sortedCorrect.length && 
+                      sortedSelected.every((val, index) => val === sortedCorrect[index]);
 
     document.querySelectorAll('.option-btn').forEach((btn, index) => {
         btn.disabled = true; // Buttons deaktivieren nach der Antwort
-        if (index === currentItem.answer) {
+        
+        const isSelected = selectedAnswers.includes(index);
+        const isActuallyCorrect = correctAnswers.includes(index);
+        
+        if (isActuallyCorrect) {
             btn.classList.add('correct'); // Richtige Antwort immer markieren
-        }
-        if (index === selectedAnswerIndex && !isCorrect) {
-            btn.classList.add('wrong'); // Falsche Auswahl markieren
+        } else if (isSelected && !isActuallyCorrect) {
+            btn.classList.add('wrong'); // Falsche Auswahl rot markieren
         }
     });
 
