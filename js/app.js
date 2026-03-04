@@ -57,13 +57,23 @@ function populateSubjects() {
         option.textContent = subject.name;
         subjectSelect.appendChild(option);
     });
-    updateDifficultySelector(); // Direkt beim ersten Mal aufrufen
+
+    // Gespeichertes Fach laden
+    const savedSubject = localStorage.getItem('wi_trainer_subject');
+    if (savedSubject && subjects.some(s => s.id === savedSubject)) {
+        subjectSelect.value = savedSubject;
+    }
+
+    updateDifficultySelector(); 
 }
 
 //Passt die zweite Auswahlbox (Schwierigkeit/Units) an das gewählte Fach an
 async function updateDifficultySelector() {
     const selectedSubjectId = subjectSelect.value;
     difficultyLabel.style.opacity = 0; // Fade out
+
+    // Fach speichern
+    localStorage.setItem('wi_trainer_subject', selectedSubjectId);
 
     if (selectedSubjectId === 'english_vocab') {
         difficultyLabel.textContent = 'Unit auswählen:';
@@ -87,6 +97,14 @@ async function updateDifficultySelector() {
             <option value="mittel">Mittel</option>
             <option value="schwer">Schwer</option>
         `;
+    }
+    
+    // Gespeicherte Schwierigkeit laden
+    const savedDifficulty = localStorage.getItem('wi_trainer_difficulty');
+    const optionExists = Array.from(difficultySelect.options).some(opt => opt.value === savedDifficulty);
+    
+    if (savedDifficulty && optionExists) {
+        difficultySelect.value = savedDifficulty;
     }
     difficultyLabel.style.opacity = 1; // Fade in
 }
@@ -196,10 +214,10 @@ function loadNextQuestion() {
     });
 }
 
-// WIEDERHERGESTELLT: Logik zum Auswählen einer Option
+// Logik zum Auswählen einer Option
 function toggleSelection(button, index) {
     const answerPos = selectedAnswers.indexOf(index);
-   if (answerPos === -1) {
+    if (answerPos === -1) {
         // Noch nicht ausgewählt -> hinzufügen
         selectedAnswers.push(index);
         button.classList.add('selected');
@@ -222,7 +240,7 @@ function toggleSelection(button, index) {
 function checkAnswer() {
     playedCount++;
     
-    // Die richtigen Antworten aus dem Fragen-Objekt laden (heißt "correct", nicht "answer")
+    // Die richtigen Antworten aus dem Fragen-Objekt laden
     const correctAnswers = currentItem.correct || [];
 
     // Arrays sortieren und vergleichen, um zu prüfen, ob exakt die richtigen gewählt wurden
@@ -331,8 +349,15 @@ function handleVocabAnswer(knewIt) {
 
 // --- EVENT LISTENER ---
 
+// Generelle Events
 document.addEventListener('DOMContentLoaded', populateSubjects);
 subjectSelect.addEventListener('change', updateDifficultySelector);
+
+// LocalStorage Event für Schwierigkeit
+difficultySelect.addEventListener('change', () => {
+    localStorage.setItem('wi_trainer_difficulty', difficultySelect.value);
+});
+
 startBtn.addEventListener('click', start);
 restartBtn.addEventListener('click', resetApp);
 
