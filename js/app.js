@@ -26,6 +26,7 @@ const optionsContainer = document.getElementById('options-container');
 const feedbackContainer = document.getElementById('feedback-container');
 const feedbackText = document.getElementById('feedback-text');
 const explanationText = document.getElementById('explanation-text');
+const mcQuitBtn = document.getElementById('mc-quit-btn'); // VERGESSEN 1: Hinzugefügt
 
 // Vokabel-spezifische UI-Elemente
 const vocabCard = document.getElementById('vocab-card');
@@ -37,6 +38,7 @@ const vocabPlayedDisplay = document.getElementById('vocab-played-display');
 const vocabFeedback = document.getElementById('vocab-feedback');
 const vocabBtnYes = document.getElementById('vocab-btn-yes');
 const vocabBtnNo = document.getElementById('vocab-btn-no');
+const vocabQuitBtn = document.getElementById('vocab-quit-btn');
 
 let allQuestionsOfSubject = [];
 let currentItems = [];
@@ -75,11 +77,11 @@ async function updateDifficultySelector() {
     // Fach speichern
     localStorage.setItem('wi_trainer_subject', selectedSubjectId);
 
-    if (selectedSubjectId === 'english_vocab') {
+    if (selectedSubjectId.startsWith('english_vocab')) {
         difficultyLabel.textContent = 'Unit auswählen:';
         const selectedSubject = subjects.find(s => s.id === selectedSubjectId);
         try {
-            const module = await import(`./${selectedSubject.questionFile}`);
+            const module = await import(`./questions/${selectedSubjectId}.js`);
             const units = [...new Set(module.questions.map(q => q.unit))].sort((a,b) => a - b);
             
             difficultySelect.innerHTML = '<option value="alle">Alle Units</option>';
@@ -132,7 +134,7 @@ async function start() {
     }
 
     try {
-        const module = await import(`./${selectedSubject.questionFile}`);
+        const module = await import(`./questions/${selectedSubjectId}.js`);
         allQuestionsOfSubject = module.questions;
     } catch (error) {
         console.error("Fragen konnten nicht geladen werden:", error);
@@ -141,7 +143,7 @@ async function start() {
     }
     
     // Filter anwenden (entweder nach Schwierigkeit oder nach Unit)
-    if (selectedSubjectId === 'english_vocab') {
+    if (selectedSubjectId.startsWith('english_vocab')) {
         currentItems = allQuestionsOfSubject.filter(
             item => selectedFilter === 'alle' || item.unit == selectedFilter
         );
@@ -162,7 +164,7 @@ async function start() {
     startScreen.classList.add('hidden');
 
     // Weiche: Welcher Modus wird gestartet?
-    if (selectedSubjectId === 'english_vocab') {
+    if (selectedSubjectId.startsWith('english_vocab')) {
         vocabScreen.classList.remove('hidden');
         loadNextVocab(null);
     } else {
@@ -205,6 +207,10 @@ function loadNextQuestion() {
     questionsPlayedText.innerText = `Frage: ${playedCount + 1} / ${currentItems.length}`;
     questionText.innerText = currentItem.question;
 
+    // Logik zum Ein- und Ausblenden der Beenden-Buttons
+    mcQuitBtn.classList.remove('hidden'); // Den "Beenden"-Button vor der Antwort anzeigen
+    endBtn.classList.add('hidden'); // Sicherstellen, dass der andere "Beenden"-Button versteckt ist
+
     currentItem.options.forEach((optionText, index) => {
         const button = document.createElement('button');
         button.innerText = optionText;
@@ -218,16 +224,13 @@ function loadNextQuestion() {
 function toggleSelection(button, index) {
     const answerPos = selectedAnswers.indexOf(index);
     if (answerPos === -1) {
-        // Noch nicht ausgewählt -> hinzufügen
         selectedAnswers.push(index);
         button.classList.add('selected');
     } else {
-        // Bereits ausgewählt -> wieder entfernen (Toggle)
         selectedAnswers.splice(answerPos, 1);
         button.classList.remove('selected');
     }
 
-    // Prüfen-Button nur aktivieren, wenn mindestens eine Option gewählt ist
     if (selectedAnswers.length > 0) {
         checkBtn.disabled = false;
         checkBtn.style.opacity = "1";
@@ -240,26 +243,21 @@ function toggleSelection(button, index) {
 function checkAnswer() {
     playedCount++;
     
-    // Die richtigen Antworten aus dem Fragen-Objekt laden
     const correctAnswers = currentItem.correct || [];
-
-    // Arrays sortieren und vergleichen, um zu prüfen, ob exakt die richtigen gewählt wurden
     const sortedSelected = [...selectedAnswers].sort();
     const sortedCorrect = [...correctAnswers].sort();
-    
     const isCorrect = sortedSelected.length === sortedCorrect.length && 
                       sortedSelected.every((val, index) => val === sortedCorrect[index]);
 
     document.querySelectorAll('.option-btn').forEach((btn, index) => {
-        btn.disabled = true; // Buttons deaktivieren nach der Antwort
-        
+        btn.disabled = true;
         const isSelected = selectedAnswers.includes(index);
         const isActuallyCorrect = correctAnswers.includes(index);
         
         if (isActuallyCorrect) {
-            btn.classList.add('correct'); // Richtige Antwort immer markieren
+            btn.classList.add('correct');
         } else if (isSelected && !isActuallyCorrect) {
-            btn.classList.add('wrong'); // Falsche Auswahl rot markieren
+            btn.classList.add('wrong');
         }
     });
 
@@ -276,84 +274,61 @@ function checkAnswer() {
 
     feedbackContainer.classList.remove('hidden');
     checkBtn.classList.add('hidden');
+    
+    // Logik zum Tauschen der Beenden-Buttons
+    mcQuitBtn.classList.add('hidden'); // Jetzt den ersten "Beenden"-Button ausblenden...
+    endBtn.classList.remove('hidden'); // ...und den im Feedback-Container anzeigen.
 }
 
 
 // --- VOKABELTRAINER: SPEZIFISCHE FUNKTIONEN ---
 
 function loadNextVocab(knewIt) {
-    if (isVocabTransitioning) return; // Verhindert schnelle Doppelklicks
+    if (isVocabTransitioning) return;
     isVocabTransitioning = true;
 
-    // 1. Punktzahl aktualisieren (falls eine Antwort gegeben wurde)
-    if (knewIt === true) {
-        score++;
-    }
-    if (knewIt !== null) { // null bedeutet, es ist die allererste Karte
-        playedCount++;
-    }
+    if (knewIt === true) score++;
+    if (knewIt !== null) playedCount++;
 
-    // 2. Prüfen, ob das Quiz vorbei ist
     if (playedCount >= currentItems.length && knewIt !== null) {
         showResult();
         isVocabTransitioning = false;
         return;
     }
 
-    // 3. Karte ausblenden
     vocabCard.style.opacity = '0';
     vocabFeedback.classList.add('hidden');
 
-    // 4. Warten, bis die Ausblend-Animation abgeschlossen ist (250ms)
     setTimeout(() => {
-        
-        // 5. Animationen KOMPLETT deaktivieren
         vocabCard.style.transition = 'none';
-        
-        // 6. Karte sofort und ohne Animation zurückdrehen
         vocabCard.classList.remove('flipped');
         
-        // 7. Neuen Inhalt in die unsichtbare Karte laden
         currentItem = currentItems[playedCount];
         vocabTerm.textContent = currentItem.english;
         vocabTranslation.textContent = currentItem.german;
         vocabExample.textContent = currentItem.example || '';
         
-        // 8. Punktestand aktualisieren
         vocabScoreDisplay.innerText = `Gelernt: ${score}`;
         vocabPlayedDisplay.innerText = `Fortschritt: ${playedCount} / ${currentItems.length}`;
 
-        // 9. Der bulletproof-Trick: Wir warten genau 2 Bildschirm-Frames ab.
-        // Das garantiert, dass die un-animierte Karte im Hintergrund fest registriert wurde.
         requestAnimationFrame(() => {
             requestAnimationFrame(() => {
-                
-                // Animationen wieder einschalten (leerer String holt die Regeln aus der style.css)
                 vocabCard.style.transition = ''; 
-                
-                // Karte sanft wieder einblenden
                 vocabCard.style.opacity = '1';
-                
-                // Klicks wieder erlauben
                 isVocabTransitioning = false; 
-                
             });
         });
-
     }, 250); 
 }
 
 function handleVocabAnswer(knewIt) {
-    loadNextVocab(knewIt); // Ruft die Ladefunktion mit dem Ergebnis auf
+    loadNextVocab(knewIt);
 }
 
 // --- EVENT LISTENER ---
 
-// Generelle Events
 document.addEventListener('DOMContentLoaded', populateSubjects);
 subjectSelect.addEventListener('change', updateDifficultySelector);
-
-// LocalStorage Event für Schwierigkeit
 difficultySelect.addEventListener('change', () => {
     localStorage.setItem('wi_trainer_difficulty', difficultySelect.value);
 });
@@ -365,6 +340,7 @@ restartBtn.addEventListener('click', resetApp);
 checkBtn.addEventListener('click', checkAnswer);
 nextBtn.addEventListener('click', loadNextQuestion);
 endBtn.addEventListener('click', showResult);
+mcQuitBtn.addEventListener('click', showResult);
 
 // Vokabel-Listener
 vocabCard.addEventListener('click', () => {
@@ -375,3 +351,4 @@ vocabCard.addEventListener('click', () => {
 });
 vocabBtnYes.addEventListener('click', () => handleVocabAnswer(true));
 vocabBtnNo.addEventListener('click', () => handleVocabAnswer(false));
+vocabQuitBtn.addEventListener('click', showResult);

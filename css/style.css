@@ -177,7 +177,9 @@ select:focus {
 .quiz-header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-bottom: 20px;
+    gap: 8px;
 }
 
 .badge {
@@ -187,6 +189,9 @@ select:focus {
     border-radius: 20px;
     font-size: 0.9rem;
     font-weight: bold;
+        white-space: nowrap;
+    flex-shrink: 0;
+    text-align: center;
 }
 
 /* Antwort-Optionen */
@@ -366,4 +371,31 @@ select:focus {
 }
 #vocab-btn-no:active {
      box-shadow: 0 0px 0 #e8a0a0;
+}
+
+.quit-btn {
+    background-color: transparent;
+    border: 2px solid var(--powder-blue);
+    color: var(--ash-brown);
+    padding: 6px 14px;
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-left: auto;
+    align-self: center;
+    white-space: nowrap;
+}
+
+.quit-btn:hover {
+    background-color: var(--powder-blue);
+    color: white;
+}
+
+.quit-btn:active {
+    transform: scale(0.95);
+    background-color: var(--ash-brown);
+    border-color: var(--ash-brown);
 }

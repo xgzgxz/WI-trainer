@@ -33,5 +33,10 @@ export const subjects = [
         id: 'english_vocab',
         name: 'Englisch (Vokabeln)',
         questionFile: 'questions/english_vocab.js'
+    },
+        {
+        id: 'english_vocab2',
+        name: 'Englisch (Klausur)',
+        questionFile: 'questions/english_vocab2.js'
     }
 ];
