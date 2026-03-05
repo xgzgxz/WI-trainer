@@ -26,17 +26,17 @@ export const subjects = [
     },
     {
         id: 'english_mc',
-        name: 'Englisch (Business)',
+        name: 'Englisch (Apology Exercise)',
         questionFile: 'questions/english_mc.js'
     },
     {
         id: 'english_vocab',
-        name: 'Englisch (Vokabeln)',
+        name: 'Englisch (Glossary Grundstufe)',
         questionFile: 'questions/english_vocab.js'
     },
         {
         id: 'english_vocab2',
-        name: 'Englisch (Klausur)',
+        name: 'Englisch (Financial times articles)',
         questionFile: 'questions/english_vocab2.js'
     }
 ];
