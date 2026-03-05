@@ -409,7 +409,7 @@ body.dark-mode .option-btn.selected {
 }
 
 .card-back {
-    background-color: #2c3e50; /* Dunkles Grün für die Rückseite */
+    background-color: #e0f2e9;
     transform: rotateY(180deg);
 }
 body.dark-mode .card-back {
