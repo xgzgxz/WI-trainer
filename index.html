@@ -12,6 +12,11 @@
         <!-- STARTBILDSCHIRM -->
         <div id="start-screen" class="screen">
             <div class="bubble-header">
+                <!-- EINZIGER DARK MODE TOGGLE -->
+                <div class="theme-switcher">
+                    <input type="checkbox" id="theme-toggle">
+                    <label for="theme-toggle" class="slider"></label>
+                </div>
                 <h1>WI-Trainer</h1>
                 <p>Prüfungsvorbereitung</p>
             </div>
@@ -35,7 +40,7 @@
             <button id="start-btn" class="primary-btn">Quiz starten</button>
         </div>
 
-        <!-- QUIZBILDSCHIRM -->
+        <!-- QUIZBILDSCHIRM (ohne Toggle) -->
         <div id="quiz-screen" class="screen hidden">
              <div class="quiz-header">
                 <span id="score-display" class="badge">Punkte: 0</span>
@@ -55,12 +60,12 @@
             </div>
         </div>
 
-        <!-- VOKABEL-BILDSCHIRM -->
+        <!-- VOKABEL-BILDSCHIRM (ohne Toggle) -->
         <div id="vocab-screen" class="screen hidden">
             <div class="quiz-header">
                 <span id="vocab-score-display" class="badge">Punkte: 0</span>
-                <span id="vocab-played-display" class="badge">Gelernt: 0 / 0</span>
                 <button id="vocab-quit-btn" class="quit-btn">Beenden</button>
+                <span id="vocab-played-display" class="badge">Gelernt: 0 / 0</span>
             </div>
             
             <div id="vocab-card" class="vocab-card">
@@ -82,7 +87,7 @@
             </div>
         </div>
 
-        <!-- ERGEBNISBILDSCHIRM -->
+        <!-- ERGEBNISBILDSCHIRM (ohne Toggle) -->
         <div id="result-screen" class="screen hidden">
             <div class="bubble-header">
                 <h2>Quiz Beendet!</h2>

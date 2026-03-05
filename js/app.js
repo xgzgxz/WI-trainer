@@ -14,6 +14,7 @@ const subjectSelect = document.getElementById('subject-select');
 const difficultySelect = document.getElementById('difficulty-select');
 const difficultyLabel = document.getElementById('difficulty-label');
 const finalScoreText = document.getElementById('final-score');
+const themeToggle = document.getElementById('theme-toggle'); // Zurück zur einzelnen ID
 
 // Quiz-spezifische UI-Elemente
 const checkBtn = document.getElementById('check-btn');
@@ -26,7 +27,7 @@ const optionsContainer = document.getElementById('options-container');
 const feedbackContainer = document.getElementById('feedback-container');
 const feedbackText = document.getElementById('feedback-text');
 const explanationText = document.getElementById('explanation-text');
-const mcQuitBtn = document.getElementById('mc-quit-btn'); // VERGESSEN 1: Hinzugefügt
+const mcQuitBtn = document.getElementById('mc-quit-btn');
 
 // Vokabel-spezifische UI-Elemente
 const vocabCard = document.getElementById('vocab-card');
@@ -48,6 +49,22 @@ let currentItem;
 let selectedAnswers = [];
 let isVocabTransitioning = false; 
 
+// --- DARK MODE LOGIK (wieder vereinfacht) ---
+function applyTheme(theme) {
+    if (theme === 'dark') {
+        document.body.classList.add('dark-mode');
+        themeToggle.checked = true;
+    } else {
+        document.body.classList.remove('dark-mode');
+        themeToggle.checked = false;
+    }
+}
+
+function handleThemeToggle() {
+    const newTheme = themeToggle.checked ? 'dark' : 'light';
+    localStorage.setItem('wi_trainer_theme', newTheme);
+    applyTheme(newTheme);
+}
 // --- INITIALISIERUNG & UI-UPDATES ---
 
 // Füllt die Fächerauswahl beim Start
@@ -327,7 +344,12 @@ function handleVocabAnswer(knewIt) {
 
 // --- EVENT LISTENER ---
 
-document.addEventListener('DOMContentLoaded', populateSubjects);
+document.addEventListener('DOMContentLoaded', () => {
+    populateSubjects();
+    const savedTheme = localStorage.getItem('wi_trainer_theme') || 'light';
+    applyTheme(savedTheme);
+});
+
 subjectSelect.addEventListener('change', updateDifficultySelector);
 difficultySelect.addEventListener('change', () => {
     localStorage.setItem('wi_trainer_difficulty', difficultySelect.value);
@@ -335,6 +357,7 @@ difficultySelect.addEventListener('change', () => {
 
 startBtn.addEventListener('click', start);
 restartBtn.addEventListener('click', resetApp);
+themeToggle.addEventListener('change', handleThemeToggle); // Wieder ein einzelner Listener
 
 // Quiz-Listener
 checkBtn.addEventListener('click', checkAnswer);
@@ -352,3 +375,9 @@ vocabCard.addEventListener('click', () => {
 vocabBtnYes.addEventListener('click', () => handleVocabAnswer(true));
 vocabBtnNo.addEventListener('click', () => handleVocabAnswer(false));
 vocabQuitBtn.addEventListener('click', showResult);
+
+// --- DARK MODE LISTENER & INITIALISIERUNG ---
+themeToggle.addEventListener('change', handleThemeToggle);
+// Beim Laden der Seite das gespeicherte Theme anwenden
+const savedTheme = localStorage.getItem('wi_trainer_theme') || 'light';
+applyTheme(savedTheme);
