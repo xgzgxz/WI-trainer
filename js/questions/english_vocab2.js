@@ -1,13 +1,13 @@
 export const questions = [
   {
     unit: 9,
-    english: "run out of",
+    english: "(to) run out of",
     german: "ausgehen, knapp werden",
     example: "there will be none available",
   },
   {
     unit: 9,
-    english: "collide with",
+    english: "(to) collide with",
     german: "kollidieren mit",
     example: "when two events or trends meet each other with a negative result",
   },
@@ -49,7 +49,7 @@ export const questions = [
   },
   {
     unit: 9,
-    english: "expire",
+    english: "(to) expire",
     german: "ablaufen, ungültig werden",
     example: "will come to an end",
   },
@@ -75,7 +75,7 @@ export const questions = [
   },
   {
     unit: 10,
-    english: "rip off",
+    english: "(to) rip off",
     german: "abzocken, stehlen",
     example: "If someone steals something",
   },
@@ -94,43 +94,43 @@ export const questions = [
   },
   {
     unit: 10,
-    english: "win over",
+    english: "(to) win over",
     german: "überzeugen, für sich gewinnen",
     example: "If you persuade someone to agree with you",
   },
   {
     unit: 10,
-    english: "draw up",
+    english: "(to) draw up",
     german: "ausarbeiten, aufsetzen",
     example: "To design a policy, plan etc.",
   },
   {
     unit: 10,
-    english: "opt out",
+    english: "(to) opt out",
     german: "sich abmelden, aussteigen",
     example: "If you say that you do not want to participate in something",
   },
   {
     unit: 10,
-    english: "threat / threaten",
+    english: "threat / (to) threaten",
     german: "Bedrohung / bedrohen",
     example: "a warning of negative action",
   },
   {
     unit: 10,
-    english: "strike a deal",
+    english: "(to) strike a deal",
     german: "eine Vereinbarung treffen, handelseinig werden",
     example: "Another way of saying 'to do a deal'",
   },
   {
     unit: 10,
-    english: "permit",
+    english: "(to) permit",
     german: "erlauben, gestatten",
     example: "to allow an activity",
   },
   {
     unit: 10,
-    english: "warn",
+    english: "(to) warn",
     german: "warnen",
     example: "to give notice of danger",
   },
@@ -143,31 +143,31 @@ export const questions = [
   },
   {
     unit: 10,
-    english: "value",
+    english: "(to) value",
     german: "bewerten, schätzen",
     example: "to estimate the monetary worth of something",
   },
   {
     unit: 10,
-    english: "fund",
+    english: "(to) fund",
     german: "finanzieren",
     example: "to provide money for",
   },
   {
     unit: 10,
-    english: "generate",
+    english: "(to) generate",
     german: "generieren, erzeugen",
     example: "to produce something (e.g. AI-generated content)",
   },
   {
     unit: 10,
-    english: "copyright",
+    english: "(to) copyright",
     german: "urheberrechtlich schützen",
     example: "to secure legal rights to a creative work",
   },
   {
     unit: 10,
-    english: "train",
+    english: "(to) train",
     german: "trainieren (Modelle)",
     example: "to teach a machine learning model using data",
   },
@@ -205,7 +205,7 @@ export const questions = [
   },
   {
     unit: 11,
-    english: "access",
+    english: "(to) access",
     german: "zugreifen auf, Zugang",
     example: "get to, look at",
   },
@@ -317,7 +317,7 @@ export const questions = [
   },
   {
     unit: 12,
-    english: "violate",
+    english: "(to) violate",
     german: "verletzen, verstoßen gegen",
     example: "break, go against, don't obey",
   },
@@ -341,7 +341,7 @@ export const questions = [
   },
   {
     unit: 12,
-    english: "terminate",
+    english: "(to) terminate",
     german: "kündigen, beenden",
     example: "fire",
   },
@@ -409,7 +409,7 @@ export const questions = [
   // Unit 13: B2 - Tourism Taxes
   {
     unit: 13,
-    english: "impose",
+    english: "(to) impose",
     german: "auferlegen, verhängen",
     example:
       "to officially introduce or enforce something, often a rule or tax",
@@ -422,19 +422,19 @@ export const questions = [
   },
   {
     unit: 13,
-    english: "cement",
+    english: "(to) cement",
     german: "festigen, untermauern",
     example: "to firmly establish or strengthen something so it lasts",
   },
   {
     unit: 13,
-    english: "push back",
+    english: "(to) push back",
     german: "sich widersetzen, ablehnen",
     example: "to oppose or resist a proposal or decision",
   },
   {
     unit: 13,
-    english: "diminish",
+    english: "(to) diminish",
     german: "verringern, schmälern",
     example: "to reduce in size, importance, or attractiveness",
   },
@@ -446,31 +446,31 @@ export const questions = [
   },
   {
     unit: 13,
-    english: "backfire",
+    english: "(to) backfire",
     german: "nach hinten losgehen",
     example: "to have the opposite effect from what was intended",
   },
   {
     unit: 13,
-    english: "harness",
+    english: "(to) harness",
     german: "nutzbar machen, einspannen",
     example: "to make use of something effectively for a particular purpose",
   },
   {
     unit: 13,
-    english: "drive (growth)",
+    english: "(to) drive (growth)",
     german: "vorantreiben (Wachstum)",
     example: "to cause or stimulate growth or improvement",
   },
   {
     unit: 13,
-    english: "implement",
+    english: "(to) implement",
     german: "umsetzen, einführen",
     example: "to put a plan or decision into action",
   },
   {
     unit: 13,
-    english: "push ahead",
+    english: "(to) push ahead",
     german: "vorantreiben, weitermachen",
     example:
       "to continue or proceed with a plan despite difficulties or opposition",
