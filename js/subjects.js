@@ -30,7 +30,7 @@ export const subjects = [
         name: 'SAP S4f10',
         questionFile: 'questions/sap_s4f10.js'
     },
-    /*,
+    
     {
         id: 'english_mc',
         name: 'Englisch (Apology Exercise)',
@@ -45,5 +45,5 @@ export const subjects = [
         id: 'english_vocab2',
         name: 'Englisch (Financial times articles)',
         questionFile: 'questions/english_vocab2.js'
-    }*/
+    }
 ];
