@@ -407,5 +407,412 @@ export const questions = [
         ],
         correct: [0],
         explanation: "Die DDMRP-Methodik ist streng strukturiert: Positionierung (Puffer festlegen), Profile & Level (einrichten/anpassen) und schließlich Ausführung (Nachschub/Priorisierung)."
-    }
+    },
+    {
+    // === WOCHE 5: S4F10 - KAPITEL 1 ===
+    schwierigkeit: "mittel",
+    question: "Wie können Sie SAP S/4HANA so einrichten, dass Sie alle Softwareaktualisierungen automatisch erhalten?",
+    options: ["On-Premise", "Cloud", "Central Finance", "Virtuell"],
+    correct: [1],
+    explanation: "In der SAP S/4HANA Cloud Edition werden Softwareaktualisierungen automatisch von SAP bereitgestellt, um sicherzustellen, dass das System immer auf dem neuesten Stand ist. Dies ist ein wesentliches Merkmal des Cloud-Modells. (Kapitel 1, Link: /module?id=s4f10#l1-1)"
+},
+{
+    schwierigkeit: "mittel",
+    question: "Welche Faktoren sollten Sie bei der Entscheidung, welche SAP-S/4HANA-Implementierungsoption für Ihr Unternehmen am besten geeignet ist, berücksichtigen? (Mehrfachauswahl)",
+    options: ["Geschäftsfunktionen, gesetzliche und regionale Anforderungen", "Ausschließlich die Vorlieben der IT-Abteilung", "IT-Strategie und Innovationszyklen", "Implementierungszeiten", "Anzahl der verwendeten SAP-GUI-Themes"],
+    correct: [0, 2, 3],
+    explanation: "Die Wahl der richtigen SAP S/4HANA-Implementierungsoption hängt von verschiedenen Faktoren ab. Dazu gehören die benötigten Geschäftsfunktionen, gesetzliche und regionale Anforderungen, die IT-Strategie und Innovationszyklen des Unternehmens sowie die geplante Implementierungszeit. Die Vorlieben der IT-Abteilung allein oder die Anzahl der GUI-Themes sind keine entscheidenden Kriterien. (Kapitel 1, Link: /module?id=s4f10#l1-1)"
+},
+{
+    schwierigkeit: "mittel",
+    question: "Welche verschiedenen Typen von SAP-Fiori-Apps können verwendet werden? (Mehrfachauswahl)",
+    options: ["Transaktionale Apps", "Analytische Apps", "Administrative Background-Apps", "Infoblätter (Factsheets)"],
+    correct: [0, 1, 3],
+    explanation: "SAP Fiori bietet verschiedene App-Typen für unterschiedliche Anwendungsfälle. 'Transaktionale Apps' werden für Geschäftsvorfälle wie das Anlegen von Bestellungen verwendet. 'Analytische Apps' bieten Einblicke und Visualisierungen von Geschäftsdaten. 'Infoblätter (Factsheets)' zeigen zentrale Informationen zu Geschäftsobjekten auf einen Blick. (Kapitel 1, Link: /module?id=s4f10#l1-1)"
+},
+{
+    schwierigkeit: "leicht",
+    question: "Auf dem SAP Fiori Launchpad können Benutzer Personalisierungsoptionen auswählen. Entscheiden Sie, ob diese Aussage richtig oder falsch ist.",
+    options: ["Richtig", "Falsch"],
+    correct: [0],
+    explanation: "Richtig. Das SAP Fiori Launchpad ist stark personalisierbar. Benutzer können Kacheln hinzufügen, entfernen, gruppieren und das Erscheinungsbild an ihre Bedürfnisse anpassen, um ihre tägliche Arbeit effizienter zu gestalten. (Kapitel 1, Link: /module?id=s4f10#l1-1)"
+},
+{
+    // === WOCHE 5: S4F10 - KAPITEL 2 ===
+    schwierigkeit: "mittel",
+    question: "Nennen Sie mindestens drei Komponenten der Finanzbuchhaltung in SAP S/4HANA. (Mehrere Antworten möglich)",
+    options: ["FI-GL (Hauptbuchhaltung)", "FI-AP (Kreditorenbuchhaltung)", "FI-AR (Debitorenbuchhaltung)", "FI-AA (Anlagenbuchhaltung)", "FI-BL (Bankbuchhaltung)", "CO-OM (Gemeinkostencontrolling)", "MM-PUR (Einkauf)"],
+    correct: [0, 1, 2, 3, 4],
+    explanation: "Die Finanzbuchhaltung (FI) in SAP S/4HANA besteht aus mehreren Kernkomponenten. Dazu gehören die Hauptbuchhaltung (FI-GL), die Kreditorenbuchhaltung (FI-AP), die Debitorenbuchhaltung (FI-AR), die Anlagenbuchhaltung (FI-AA) und die Bankbuchhaltung (FI-BL). CO-OM und MM-PUR gehören zu anderen Modulen (Controlling bzw. Materialwirtschaft). (Kapitel 2, Link: /module?id=s4f10)"
+},
+{
+    schwierigkeit: "leicht",
+    question: "In Nebenbüchern wie Kreditorenbuchhaltung und Debitorenbuchhaltung vorgenommene Buchungen werden gleichzeitig im Hauptbuch aufgezeichnet. Entscheiden Sie, ob diese Aussage richtig oder falsch ist.",
+    options: ["Richtig", "Falsch"],
+    correct: [0],
+    explanation: "Richtig. Dies ist das Prinzip der integrierten Buchhaltung in SAP. Jede Buchung auf einem Nebenbuchkonto (z.B. für einen bestimmten Kreditor) führt dank der Abstimmkontentechnik automatisch zu einer entsprechenden Buchung im Hauptbuch (FI-GL). (Kapitel 2, Link: /module?id=s4f10)"
+},
+{
+    // === WOCHE 5: S4F10 - KAPITEL 3 ===
+    schwierigkeit: "leicht",
+    question: "Wie wird in SAP ein Unternehmen (selbständig bilanzierende Einheit) abgebildet?",
+    options: ["Buchungskreis", "Kostenrechnungskreis", "Mandant", "Geschäftsbereich"],
+    correct: [0],
+    explanation: "Eine rechtlich selbstständige und bilanzierende Einheit wird in SAP als 'Buchungskreis' abgebildet. Der Mandant ist die höchste Organisationsebene, während der Kostenrechnungskreis für das interne Rechnungswesen dient. (Kapitel 3, Link: /module?id=s4f10)"
+},
+{
+    schwierigkeit: "leicht",
+    question: "Einem Kostenrechnungskreis können mehrere Buchungskreise zugeordnet werden. Entscheiden Sie, ob diese Aussage richtig oder falsch ist.",
+    options: ["Richtig", "Falsch"],
+    correct: [0],
+    explanation: "Richtig. Dies ermöglicht ein buchungskreisübergreifendes Controlling. Voraussetzung ist, dass alle zugeordneten Buchungskreise denselben operativen Kontenplan und dasselbe Geschäftsjahr verwenden. (Kapitel 3, Link: /module?id=s4f10)"
+},
+{
+    schwierigkeit: "mittel",
+    question: "Welcher Kontenplan muss einem Buchungskreis zugeordnet werden, damit Buchungen vorgenommen werden können?",
+    options: ["Gruppe", "Land", "Operativ", "Keine der genannten Möglichkeiten", "Alle genannten Möglichkeiten"],
+    correct: [2],
+    explanation: "Der 'operative Kontenplan' ist zwingend erforderlich und enthält die Konten, die in der täglichen Buchhaltung im Buchungskreis verwendet werden. Ein Gruppenkontenplan dient der Konzernkonsolidierung, ein Landeskontenplan spezifischen rechtlichen Anforderungen. (Kapitel 3, Link: /module?id=s4f10)"
+},
+{
+    schwierigkeit: "leicht",
+    question: "Welches sind die zwei Bestandteile eines Sachkontos?",
+    options: ["Kontenplansegment", "Buchungskreissegment", "Einkaufsorganisationssegment", "Vertriebsbereichssegment"],
+    correct: [0, 1],
+    explanation: "Ein Sachkontenstammsatz besteht aus dem 'Kontenplansegment', das allgemeine Informationen wie Kontonummer und Bezeichnung enthält, und dem 'Buchungskreissegment', das buchungskreisspezifische Steuerungsdaten wie Währung und Feldstatusgruppe festlegt. (Kapitel 3, Link: /module?id=s4f10)"
+},
+{
+    schwierigkeit: "mittel",
+    question: "Was ist einem Nummernbereich zugeordnet und steuert, wie das Buchungskreissegment eines Sachkontos auf einem Bildschirmbild dargestellt wird?",
+    options: ["Kontengruppe", "Feldstatusvariante", "Kontoart", "Belegart"],
+    correct: [0],
+    explanation: "Die 'Kontengruppe' steuert wichtige Eigenschaften eines Sachkontos. Sie legt den Nummernkreis für das Konto fest und bestimmt über die zugeordnete Feldstatusvariante, welche Felder im Buchungskreissegment des Stammsatzes angezeigt werden (z.B. als Muss- oder Kann-Feld). (Kapitel 3, Link: /module?id=s4f10)"
+},
+{
+    schwierigkeit: "mittel",
+    question: "Abstimmkonten können direkt bebucht werden. Entscheiden Sie, ob diese Aussage richtig oder falsch ist.",
+    options: ["Richtig", "Falsch"],
+    correct: [1],
+    explanation: "Falsch. Abstimmkonten dienen der Verbindung zwischen Nebenbüchern (Debitoren, Kreditoren, Anlagen) und dem Hauptbuch. Sie werden ausschließlich indirekt über Buchungen auf die Nebenbuchkonten bebucht, um die Konsistenz der Buchhaltung sicherzustellen. (Kapitel 3, Link: /module?id=s4f10)"
+},
+{
+    schwierigkeit: "mittel",
+    question: "Was bestimmt den Aufbau einer Bilanz und einer Gewinn- und Verlustrechnung und gibt an, welche Konten welcher Position im Bericht entsprechen?",
+    options: ["Bilanz/GuV-Struktur", "Kontenplan", "Kostenrechnungskreis", "Sachkontenstammsatz"],
+    correct: [0],
+    explanation: "Die 'Bilanz/GuV-Struktur' ist eine hierarchische Struktur, die definiert, welche Sachkonten in welche Zeilen der Bilanz und der Gewinn- und Verlustrechnung einfließen. Sie ist entscheidend für das externe Berichtswesen. (Kapitel 3, Link: /module?id=s4f10)"
+},
+{
+    schwierigkeit: "leicht",
+    question: "Aus welchen zwei Bestandteilen setzt sich ein Beleg zusammen?",
+    options: ["Belegkopf", "Belegpositionen", "Beleganhang", "Belegsaldo"],
+    correct: [0, 1],
+    explanation: "Jeder Buchungsbeleg in SAP besteht aus einem 'Belegkopf' mit allgemeinen Daten (Belegdatum, Buchungsdatum, Währung etc.) und mindestens zwei 'Belegpositionen', die die eigentlichen Soll- und Haben-Buchungen auf den Konten enthalten. (Kapitel 3, Link: /module?id=s4f10)"
+},
+{
+    schwierigkeit: "mittel",
+    question: "Für Buchungen auf Sachkonten stehen zwei Buchungsschlüssel zur Verfügung: einer für Sollbuchungen und einer für Habenbuchungen. Welche?",
+    options: ["Soll: 40, Haben: 50", "Soll: 01, Haben: 15", "Soll: 21, Haben: 31", "Soll: 70, Haben: 75"],
+    correct: [0],
+    explanation: "Bei reinen Sachkontenbuchungen im Hauptbuch werden standardmä��ig die Buchungsschlüssel '40' für Sollbuchungen und '50' für Habenbuchungen verwendet. (Kapitel 3, Link: /module?id=s4f10)"
+},
+{
+    schwierigkeit: "mittel",
+    question: "Mit einem Buchungsschlüssel kann nur auf eine Kontoart gebucht werden. Entscheiden Sie, ob diese Aussage richtig oder falsch ist.",
+    options: ["Richtig", "Falsch"],
+    correct: [0],
+    explanation: "Richtig. Der Buchungsschlüssel steuert unter anderem, auf welche Kontoart (Sachkonto, Debitor, Kreditor etc.) gebucht werden darf. Zum Beispiel ist Buchungsschlüssel 01 für Debitorenbuchungen reserviert und kann nicht für Sachkonten verwendet werden. (Kapitel 3, Link: /module?id=s4f10)"
+},
+{
+    schwierigkeit: "mittel",
+    question: "Bei der Buchung eines Belegs wird diesem Beleg eine Nummer zugeordnet. Diese Nummer liegt innerhalb eines Nummernkreises. Welchem Bestandteil im Kopf des Belegs ist dieser zugeordnet?",
+    options: ["Belegart", "Buchungsdatum", "Buchungskreis", "Währung"],
+    correct: [0],
+    explanation: "Die 'Belegart' steuert wesentliche Eigenschaften eines Belegs, darunter auch den zu verwendenden Nummernkreis. So wird sichergestellt, dass z.B. Rechnungen und Gutschriften aus unterschiedlichen Nummernkreisen stammen. (Kapitel 3, Link: /module?id=s4f10)"
+},
+{
+    schwierigkeit: "schwer",
+    question: "Welche Stammsatzeinstellungen müssen für ein Aufwandskonto, das im Rahmen einer FI-Transaktion bebucht wird, vorhanden sein, damit Informationen an das Modul Controlling übergeben werden können?",
+    options: ["Sachkontoart = Primärkosten oder Erlöse und Einstellungen zum Kostenartentyp", "Sachkontoart = Bilanzkonto und Abstimmkonto-Kennzeichen", "Sachkontoart = Sekundärkosten und Kostenstellen-Zuordnung"],
+    correct: [0],
+    explanation: "Damit eine Buchung aus dem FI kostenrechnerisch relevant ist, muss das bebuchte Sachkonto als 'Primärkostenart' oder 'Erlösart' angelegt sein. Diese Einstellung macht das FI-Konto im Controlling (CO) bekannt und ermöglicht die Buchung auf ein CO-Objekt (z.B. Kostenstelle). (Kapitel 3, Link: /module?id=s4f10)"
+},
+{
+    schwierigkeit: "leicht",
+    question: "Wenn eine Transaktion im FI gebucht wird, wird sie automatisch im Bereich AKTIVA/PASSIVA oder GEWINN & VERLUST in der Bilanz/GuV angezeigt. Entscheiden Sie, ob diese Aussage richtig oder falsch ist.",
+    options: ["Richtig", "Falsch"],
+    correct: [0],
+    explanation: "Richtig. Dank der Zuordnung der Sachkonten zur Bilanz/GuV-Struktur und der Echtzeit-Integration in S/4HANA wird jede Buchung sofort in den entsprechenden Berichten sichtbar. (Kapitel 3, Link: /module?id=s4f10)"
+},
+{
+    // === WOCHE 5: S4F10 - KAPITEL 4 ===
+    schwierigkeit: "mittel",
+    question: "Jeder Geschäftspartner muss beim Anlegen einer Gruppierung zugeordnet werden. Entscheiden Sie, ob diese Aussage richtig oder falsch ist.",
+    options: ["Richtig", "Falsch"],
+    correct: [0],
+    explanation: "Richtig. Die 'Gruppierung' ist ein Pflichtfeld beim Anlegen eines Geschäftspartners. Sie steuert unter anderem, ob die Geschäftspartnernummer intern vom System vergeben oder extern vom Benutzer eingegeben wird. (Kapitel 4, Link: /module?id=s4f10)"
+},
+{
+    schwierigkeit: "mittel",
+    question: "Kreditorenkonten bestehen aus zwei Segmenten. Welche?",
+    options: ["Allgemeine Daten (Mandantenebene)", "Buchungskreisdaten", "Vertriebsbereichsdaten", "Werksdaten"],
+    correct: [0, 1],
+    explanation: "Ein Kreditorenstammsatz (als Teil des Geschäftspartners) hat 'Allgemeine Daten' auf Mandantenebene (z.B. Adresse) und 'Buchungskreisdaten' (z.B. Zahlungsbedingungen, Abstimmkonto), die pro Buchungskreis unterschiedlich sein können. (Kapitel 4, Link: /module?id=s4f10)"
+},
+{
+    schwierigkeit: "leicht",
+    question: "In welchem Segment des Kreditorenstammsatzes befindet sich das Abstimmkonto?",
+    options: ["Im Buchungskreissegment", "In den allgemeinen Daten", "Im Einkaufsorganisationssegment", "Im Zahlungssegment"],
+    correct: [0],
+    explanation: "Das Abstimmkonto ist eine buchungskreisspezifische Information und befindet sich daher im 'Buchungskreissegment' des Kreditorenstammsatzes. Es verknüpft die Kreditorenbuchungen mit dem Hauptbuch. (Kapitel 4, Link: /module?id=s4f10)"
+},
+{
+    schwierigkeit: "mittel",
+    question: "Wenn Sie in SAP S/4HANA Kreditorenbuchungen ausführen, wird ein Informationsbereich zum Kreditor angezeigt. Wozu können Sie diese Information verwenden? (Mehrere Antworten möglich)",
+    options: ["Den Kreditorenstammsatz vor der Ausführung einer Buchung anzeigen und ändern", "Direkt die offenen Posten auf dem Kreditorenkonto aufrufen", "Materialstammdaten des Lieferanten anlegen", "Eine automatische Zahlung veranlassen"],
+    correct: [0, 1],
+    explanation: "Der Informationsbereich in den Buchungstransaktionen ist ein nützliches Werkzeug, um schnell auf kontextbezogene Informationen zuzugreifen. Man kann direkt in den Stammsatz des Kreditors abspringen oder sich dessen offene Posten anzeigen lassen, ohne die Transaktion verlassen zu müssen. (Kapitel 4, Link: /module?id=s4f10)"
+},
+{
+    schwierigkeit: "mittel",
+    question: "Welche Sachkontoart wird verwendet, um von FI auf Kostenobjekte im CO zu buchen?",
+    options: ["Primärkosten oder Erlöse", "Bilanzkonten", "Sekundärkosten", "Nichtbetriebliche Aufwendungen/Erträge"],
+    correct: [0],
+    explanation: "Sachkonten vom Typ 'Primärkosten oder Erlöse' sind das Bindeglied zwischen Externem (FI) und Internem (CO) Rechnungswesen. Nur Buchungen auf diese Konten können auf Kostenobjekte wie Kostenstellen oder Aufträge kontiert werden. (Kapitel 4, Link: /module?id=s4f10)"
+},
+{
+    schwierigkeit: "leicht",
+    question: "Für regelmäßig ausgeführte Buchungen kann welches Programm verwendet werden, um die notwendigen Belege zu erzeugen?",
+    options: ["Dauerbuchungsprogramm", "Zahlprogramm", "Mahnprogramm", "Kassenbuch"],
+    correct: [0],
+    explanation: "Das 'Dauerbuchungsprogramm' wird verwendet, um sich wiederholende Buchungen (z.B. Miete) automatisch zu einem festgelegten Zeitpunkt zu erstellen. Dies reduziert den manuellen Aufwand und vermeidet Fehler. (Kapitel 4, Link: /module?id=s4f10)"
+},
+{
+    schwierigkeit: "mittel",
+    question: "Was wird durch die Parameter für das Zahlprogramm genau definiert?",
+    options: ["Nur Buchungskreise", "Nur Lieferanten und Belege", "Buchungskreise, Kreditoren und Belege"],
+    correct: [2],
+    explanation: "Die Parameter des Zahlprogramms definieren den Umfang des Zahlungslaufs. Man legt fest, für welche 'Buchungskreise' und welche 'Kreditoren' offene Posten ('Belege') zur Zahlung vorgeschlagen werden sollen. (Kapitel 4, Link: /module?id=s4f10)"
+},
+{
+    schwierigkeit: "leicht",
+    question: "Wenn die Erstellung des Zahlungsvorschlags abgeschlossen ist, können keine Änderungen an den Zahlungsvorschlägen von SAP S/4HANA vorgenommen werden. Entscheiden Sie, ob diese Aussage richtig oder falsch ist.",
+    options: ["Richtig", "Falsch"],
+    correct: [1],
+    explanation: "Falsch. Nach der Erstellung des Zahlungsvorschlags kann dieser manuell bearbeitet werden. Man kann einzelne Posten aus der Zahlung herausnehmen (blockieren) oder die Zahlwege und Bankverbindungen ändern, bevor der eigentliche Zahllauf gestartet wird. (Kapitel 4, Link: /module?id=s4f10)"
+},
+{
+    schwierigkeit: "schwer",
+    question: "Aus welchen drei Teilen besteht ein Geschäftspartnerstammsatz, der als Kreditor (FI) und Lieferant (MM) verwendet wird?",
+    options: ["Allgemeine Daten", "Daten zum Buchungskreis", "Daten zur Einkaufsorganisation", "Daten zum Werk", "Daten zum Vertriebsbereich"],
+    correct: [0, 1, 2],
+    explanation: "Ein Geschäftspartner, der als Lieferant im Einkauf (MM) und als Kreditor in der Buchhaltung (FI) genutzt wird, benötigt: 1. 'Allgemeine Daten' (zentral), 2. 'Daten zum Buchungskreis' für die FI-Rolle und 3. 'Daten zur Einkaufsorganisation' für die MM-Rolle. (Kapitel 4, Link: /module?id=s4f10)"
+},
+{
+    schwierigkeit: "mittel",
+    question: "Welche beiden wichtigen Organisationselemente gehören zur Materialwirtschaft?",
+    options: ["Werk", "Einkaufsorganisation", "Buchungskreis", "Verkaufsorganisation"],
+    correct: [0, 1],
+    explanation: "Die zentralen Organisationselemente der Materialwirtschaft (MM) sind das 'Werk', das für die Produktion oder Lagerhaltung zuständig ist, und die 'Einkaufsorganisation', die für die Beschaffung von Materialien und Dienstleistungen verantwortlich ist. (Kapitel 4, Link: /module?id=s4f10)"
+},
+{
+    schwierigkeit: "mittel",
+    question: "Beim Anlegen einer Bestellung wird gleichzeitig ein Finanzbuchhaltungsbeleg generiert. Entscheiden Sie, ob diese Aussage richtig oder falsch ist.",
+    options: ["Richtig", "Falsch"],
+    correct: [1],
+    explanation: "Falsch. Das Anlegen einer Bestellung ist ein rein logistischer Vorgang und löst noch keine Buchung in der Finanzbuchhaltung aus. Ein FI-Beleg entsteht erst beim Wareneingang (für bewertetes Material) oder beim Rechnungseingang. (Kapitel 4, Link: /module?id=s4f10)"
+},
+{
+    schwierigkeit: "mittel",
+    question: "In SAP S/4HANA können Korrekturen in Sonderperioden (z.B. Periode 13-16) für Jahresabschlusskorrekturen gebucht werden. Entscheiden Sie, ob diese Aussage richtig oder falsch ist.",
+    options: ["Richtig", "Falsch"],
+    correct: [0],
+    explanation: "Richtig. Die Sonderperioden sind speziell für Abschlussbuchungen vorgesehen, die nach dem Ende der letzten regulären Periode (z.B. Dezember), aber noch für das abzuschließende Geschäftsjahr vorgenommen werden müssen. (Kapitel 4, Link: /module?id=s4f10)"
+},
+{
+    schwierigkeit: "schwer",
+    question: "Wenn sich der Umrechnungskurs seit der Buchung einer Kreditorenrechnung zu Ihren Gunsten geändert hat, werden die folgenden Soll- und Habentransaktionen vom Programm zur Fremdwährungsbewertung erstellt:",
+    options: ["Soll: Bilanzkorrekturkonto; Haben: Ertrag aus Fremdwährungsbewertung", "Soll: Ertrag aus Fremdwährungsbewertung; Haben: Bilanzkorrekturkonto", "Soll: Kreditorenkonto; Haben: Aufwand aus Fremdwährungsbewertung", "Soll: Bankkonto; Haben: Bilanzkorrekturkonto"],
+    correct: [0],
+    explanation: "Wenn eine Verbindlichkeit in Fremdwährung bei einem günstigeren Kurs neu bewertet wird, sinkt ihr Wert in Hauswährung. Die Differenz wird als Ertrag gebucht ('Haben: Ertrag'). Die Gegenbuchung erfolgt auf ein 'Bilanzkorrekturkonto' ('Soll'), um die Bilanzsumme nicht zu verändern, da die ursprüngliche Verbindlichkeit nicht direkt geändert wird. (Kapitel 4, Link: /module?id=s4f10)"
+},
+{
+    schwierigkeit: "schwer",
+    question: "Das Programm zur Umgliederung von Verbindlichkeiten kann für drei Zwecke eingesetzt werden. Welche?",
+    options: ["Umgliederung von Verbindlichkeiten gemäß ihren Restlaufzeiten", "Umgliederung von debitorischen Kreditoren", "Umgliederung von Kreditoren, deren Abstimmkonto sich geändert hat", "Umgliederung von Anlagegütern in das Umlaufvermögen", "Umgliederung von Fremdwährungen in Hauswährung"],
+    correct: [0, 1, 2],
+    explanation: "Das Programm zur Umgliederung von Verbindlichkeiten dient dazu, die Bilanz korrekt darzustellen. Es kann Verbindlichkeiten nach Restlaufzeit sortieren (kurz-/langfristig), Kreditoren mit Soll-Saldo als Forderung ausweisen (debitorische Kreditoren) und Korrekturen bei Abstimmkontenwechsel durchführen. (Kapitel 4, Link: /module?id=s4f10)"
+},
+{
+    // === WOCHE 5: S4F10 - KAPITEL 5 ===
+    schwierigkeit: "mittel",
+    question: "Der Bereich für die allgemeinen Daten des Geschäftspartnerstammsatzes muss für jeden Buchungskreis, der Geschäfte mit diesem Debitor tätigt, separat angelegt werden. Entscheiden Sie, ob diese Aussage richtig oder falsch ist.",
+    options: ["Richtig", "Falsch"],
+    correct: [1],
+    explanation: "Falsch. Die allgemeinen Daten (z.B. Name, Adresse) eines Geschäftspartners werden zentral auf Mandantenebene angelegt und sind für alle Buchungskreise gültig. Nur die buchungskreis- und vertriebsbereichsspezifischen Daten müssen separat pro Organisationseinheit gepflegt werden. (Kapitel 5, Link: /module?id=s4f10)"
+},
+{
+    schwierigkeit: "mittel",
+    question: "Wodurch wird die Buchung für einen Debitor mit dem Hauptbuch verknüpft?",
+    options: ["Abstimmkonto", "Belegart", "Buchungsschlüssel", "Kontengruppe"],
+    correct: [0],
+    explanation: "Das im Debitorstammsatz hinterlegte 'Abstimmkonto' stellt die Verbindung zum Hauptbuch her. Jede Buchung auf das Debitorenkonto wird automatisch auch auf dieses Sachkonto im Hauptbuch gebucht, was die Konsistenz zwischen Neben- und Hauptbuch sicherstellt. (Kapitel 5, Link: /module?id=s4f10)"
+},
+{
+    schwierigkeit: "schwer",
+    question: "Wenn eine Teilzahlung für einen Zahlungseingang mit der Methode \"Teilzahlung\" verarbeitet wird, wird die Rechnung beglichen und ein neuer offener Posten in Höhe der Zahlungsdifferenz angelegt. Entscheiden Sie, ob diese Aussage richtig oder falsch ist.",
+    options: ["Richtig", "Falsch"],
+    correct: [1],
+    explanation: "Falsch. Das beschriebene Verfahren ist die 'Restpostenmethode'. Bei der 'Teilzahlungsmethode' bleibt die ursprüngliche Rechnung als offener Posten bestehen und die erhaltene Zahlung wird als separater offener Posten (mit negativem Vorzeichen) gebucht. Beide Posten werden erst beim vollständigen Ausgleich miteinander verrechnet. (Kapitel 5, Link: /module?id=s4f10)"
+},
+{
+    schwierigkeit: "mittel",
+    question: "Verschiedene Ausgangsrechnungen, die nicht zu einem Kundenauftrag gehören, können nur über herkömmliche SAP-GUI-Transaktionen in der Komponente für die Debitorenbuchhaltung erfasst werden. Entscheiden Sie, ob diese Aussage richtig oder falsch ist.",
+    options: ["Richtig", "Falsch"],
+    correct: [1],
+    explanation: "Falsch. In SAP S/4HANA können solche reinen FI-Rechnungen (ohne Bezug zu einem Logistikprozess) sowohl über klassische SAP-GUI-Transaktionen als auch über moderne SAP-Fiori-Apps erfasst werden. (Kapitel 5, Link: /module?id=s4f10)"
+},
+{
+    schwierigkeit: "mittel",
+    question: "Wie kann eingesehen werden, ob ein Debitor gemahnt wurde? Wählen Sie die richtige Antwort.",
+    options: ["Sie sehen im Korrespondenzbereich des Debitorenstammsatzes nach.", "Sie prüfen die Einzelpostendetails im Debitorenkonto.", "Sowohl A als auch B.", "Keine der genannten Möglichkeiten."],
+    correct: [2],
+    explanation: "Beide Wege sind möglich. Das Datum der letzten Mahnung und die Mahnstufe werden sowohl im Debitorenstammsatz (Korrespondenzbereich) gespeichert als auch in den Details des gemahnten Einzelpostens vermerkt. (Kapitel 5, Link: /module?id=s4f10)"
+},
+{
+    schwierigkeit: "mittel",
+    question: "Mit der transaktionalen App \"Klärungsfälle bearbeiten\" können Sie Folgendes tun: (Mehrere Antworten möglich)",
+    options: ["Klärungsfälle anhand verschiedener Kriterien suchen und filtern.", "Die Details eines Klärungsfalls anzeigen, wie z.B. Textnotizen und verknüpfte Rechnungen.", "Klärungsfallattribute bearbeiten, wie z.B. den Bearbeiter.", "Textnotizen zu einem Klärungsfall hinzufügen.", "Dateianhänge zu einem Klärungsfall hinzufügen."],
+    correct: [0, 1, 2, 3, 4],
+    explanation: "Die Fiori-App 'Klärungsfälle bearbeiten' ist ein zentrales Werkzeug im Dispute Management. Sie ermöglicht eine umfassende Bearbeitung von der Suche und Anzeige bis hin zur Bearbeitung von Attributen, dem Hinzufügen von Notizen und Anhängen, um Zahlungsdifferenzen effizient zu klären. (Kapitel 5, Link: /module?id=s4f10)"
+},
+{
+    schwierigkeit: "mittel",
+    question: "Wie lauten die drei Elemente, die zusammen einen Vertriebsbereich ergeben?",
+    options: ["Verkaufsorganisation", "Vertriebsweg", "Sparte", "Werk", "Buchungskreis"],
+    correct: [0, 1, 2],
+    explanation: "Ein Vertriebsbereich ist eine eindeutige Kombination aus 'Verkaufsorganisation' (wer verkauft?), 'Vertriebsweg' (wie wird verkauft, z.B. Handel, Direktvertrieb) und 'Sparte' (was wird verkauft, z.B. Fahrräder, Ersatzteile). Er ist entscheidend für die Steuerung von Vertriebsprozessen. (Kapitel 5, Link: /module?id=s4f10)"
+},
+{
+    schwierigkeit: "mittel",
+    question: "Wenn eine Lieferung angelegt wird, werden automatisch Buchhaltungsvorgänge generiert. Entscheiden Sie, ob diese Aussage richtig oder falsch ist.",
+    options: ["Richtig", "Falsch"],
+    correct: [1],
+    explanation: "Falsch. Das Anlegen der Lieferung ist ein rein logistischer Schritt zur Vorbereitung des Versands. Ein Buchhaltungsvorgang (Buchung von Warenaufwand an Bestand) wird erst beim Buchen des Warenausgangs zur Lieferung erzeugt. (Kapitel 5, Link: /module?id=s4f10)"
+},
+{
+    schwierigkeit: "mittel",
+    question: "Wenn die Faktura in der Kundenauftragsbearbeitung angelegt wird, wird automatisch ein Buchhaltungsbeleg generiert, der das Konto des Kunden belastet und den Erlös bucht. Entscheiden Sie, ob diese Aussage richtig oder falsch ist.",
+    options: ["Richtig", "Falsch"],
+    correct: [0],
+    explanation: "Richtig. Mit dem Sichern der Faktura (Rechnung) wird im Hintergrund automatisch ein Buchhaltungsbeleg erzeugt. Dieser bucht die Forderung auf das Debitorenkonto (Soll) und den entsprechenden Erlös auf ein Erlöskonto (Haben). (Kapitel 5, Link: /module?id=s4f10)"
+},
+{
+    schwierigkeit: "schwer",
+    question: "Welcher Schlüssel muss in den Stammsatz eines Debitors eingetragen werden, damit dieser Debitor in das Bewertungsprogramm für überfällige Forderungen einbezogen werden kann?",
+    options: ["Wertberichtigungsschlüssel", "Mahnschlüssel", "Zahlungsbedingungsschlüssel", "Feldstatusgruppe"],
+    correct: [0],
+    explanation: "Der 'Wertberichtigungsschlüssel' im Debitorenstammsatz steuert, nach welcher Methode und mit welchen Prozentsätzen eine Forderung im Rahmen des Monatsabschlusses pauschal wertberichtigt wird, falls sie überfällig ist. (Kapitel 5, Link: /module?id=s4f10)"
+},
+{
+    schwierigkeit: "schwer",
+    question: "Das Wertberichtigungsprogramm führt eine Buchung durch, die zu Beginn des nächsten Monats storniert wird. Welche Konten werden mit der Buchung be- und entlastet?",
+    options: ["Soll: Einzelwertberichtigung; Haben: Wertberichtigung Forderungen", "Soll: Wertberichtigung Forderungen; Haben: Einzelwertberichtigung", "Soll: Debitorenkonto; Haben: Abstimmkonto", "Soll: Bankkonto; Haben: Wertberichtigung Forderungen"],
+    correct: [0],
+    explanation: "Die Buchung lautet Soll an Aufwandskonto ('Einzelwertberichtigung') und Haben an Bilanzkorrekturkonto ('Wertberichtigung Forderungen'). Da dies eine rein statistische Buchung für den Periodenabschluss ist, wird sie am ersten Tag der Folgeperiode automatisch wieder storniert. (Kapitel 5, Link: /module?id=s4f10)"
+},
+{
+    // === WOCHE 5: S4F10 - KAPITEL 6 ===
+    schwierigkeit: "mittel",
+    question: "Wie wird beim Anlegen eines Anlagenstammsatzes die Anlagennummer zugeordnet?",
+    options: ["Die Anlagennummer wird über die Anlagenklasse zugeordnet.", "Die Anlagennummer wird manuell vergeben.", "Die Anlagennummer wird über den Buchungskreis zugeordnet.", "Die Anlagennummer wird über das Sachkonto abgeleitet."],
+    correct: [0],
+    explanation: "Die 'Anlagenklasse' ist das zentrale Steuerungselement für Anlagen. Sie legt unter anderem den Nummernkreis fest, aus dem die Anlagennummer beim Anlegen automatisch gezogen wird. (Kapitel 6, Link: /module?id=s4f10)"
+},
+{
+    schwierigkeit: "mittel",
+    question: "Wozu dient der Kontenfindungsschlüssel für die Anlage?",
+    options: ["Er verbindet die Anlage mit dem Sachkonto (Abstimmkonto).", "Er berechnet die monatliche Abschreibung.", "Er definiert die voraussichtliche Nutzungsdauer.", "Er verknüpft die Anlage zwingend mit einer Kostenstelle."],
+    correct: [0],
+    explanation: "Der 'Kontenfindungsschlüssel' ist in der Anlagenklasse hinterlegt und verknüpft die Anlage mit den relevanten Sachkonten im Hauptbuch (z.B. Anschaffungswert, Abschreibungen). Er ist somit entscheidend für die automatische Kontenfindung bei Anlagenbuchungen. (Kapitel 6, Link: /module?id=s4f10)"
+},
+{
+    schwierigkeit: "leicht",
+    question: "Jede Anlage gehört einem Buchungskreis an. Entscheiden Sie, ob diese Aussage richtig oder falsch ist.",
+    options: ["Richtig", "Falsch"],
+    correct: [0],
+    explanation: "Richtig. Jede Anlage muss genau einem Buchungskreis zugeordnet sein. Diese Zuordnung ist fix und stellt sicher, dass die Anlagenwerte korrekt in der Bilanz des jeweiligen Unternehmens ausgewiesen werden. (Kapitel 6, Link: /module?id=s4f10)"
+},
+{
+    schwierigkeit: "mittel",
+    question: "Eine Bewegungsart gibt an, an welcher Stelle im Anlagengitter die Buchung aufgeführt wird. Entscheiden Sie, ob diese Aussage richtig oder falsch ist.",
+    options: ["Richtig", "Falsch"],
+    correct: [0],
+    explanation: "Richtig. Die Bewegungsart klassifiziert die Geschäftstransaktion (z.B. Zugang, Abgang, Umbuchung) und steuert, in welcher Spalte des Anlagengitters der Wert erscheint. Dies ist entscheidend für die Nachvollziehbarkeit der Anlagenentwicklung. (Kapitel 6, Link: /module?id=s4f10)"
+},
+{
+    schwierigkeit: "mittel",
+    question: "Welche Methoden stehen für das Buchen von Zugängen in der Anlagenbuchhaltung zur Verfügung? (Mehrere Antworten möglich)",
+    options: ["Ein Anlagenzugang aus einem Kauf gegen Kreditor.", "Ein Anlagenkauf mit automatischer Gegenbuchung.", "Abrechnung ausschließlich über das Kassenbuch.", "Automatische Buchung bei der Warenausgabe im Vertrieb."],
+    correct: [0, 1],
+    explanation: "Anlagenzugänge können auf verschiedene Weisen gebucht werden. Die häufigste ist die integrierte Buchung über den Einkaufsprozess (gegen Kreditor). Eine weitere Möglichkeit ist eine reine FI-Buchung, bei der die Gegenbuchung direkt auf ein Verrechnungskonto erfolgt. (Kapitel 6, Link: /module?id=s4f10)"
+},
+{
+    schwierigkeit: "mittel",
+    question: "Wozu dient der Asset Explorer?",
+    options: ["Er bietet eine Übersicht über die Aktivitäten für eine Anlage nach Bewertungsbereich und Geschäftsjahr (Planwerte, gebuchte Bewegungen, Abschreibungen etc.).", "Er dient ausschließlich zur Anlage und Löschung neuer Buchungskreise in der Anlagenbuchhaltung.", "Er ist ein Tool zur Verwaltung von Mitarbeiterzugriffen auf Anlagegüter.", "Er berechnet automatisch den Verkaufspreis einer Anlage für den externen Markt."],
+    correct: [0],
+    explanation: "Der 'Asset Explorer' (Transaktion AW01N) ist das zentrale Analysewerkzeug für einzelne Anlagen. Er bietet eine detaillierte und transparente Übersicht über alle Werte und Bewegungen (Anschaffungswerte, Abschreibungen, Zuschreibungen etc.) einer Anlage, aufgeschlüsselt nach Bewertungsbereichen und Geschäftsjahren. (Kapitel 6, Link: /module?id=s4f10)"
+},
+{
+    schwierigkeit: "mittel",
+    question: "Welche Art von Informationen liefert das Anlagengitter?",
+    options: ["Ausschließlich geplante Wartungsintervalle von Maschinen.", "Eine umfassende Übersicht für den Abschluss (Buchwerte zu Beginn/Ende des Jahres, Zugänge, Abgänge, Abschreibungen).", "Eine Liste aller Debitoren und deren offener Posten.", "Echtzeitdaten zu Mitarbeiterstunden, die an Maschinen gearbeitet wurden."],
+    correct: [1],
+    explanation: "Das Anlagengitter ist der wichtigste Standardbericht in der Anlagenbuchhaltung für den Jahresabschluss. Es zeigt die Entwicklung des Anlagevermögens über ein Geschäftsjahr, indem es Anfangsbestände, alle Zugänge, Abgänge, Umbuchungen und Abschreibungen detailliert auflistet und die Endbestände ausweist. (Kapitel 6, Link: /module?id=s4f10)"
+},
+{
+    // === WOCHE 5: S4F10 - KAPITEL 7 ===
+    schwierigkeit: "leicht",
+    question: "Alle Hausbankkonten werden in SAP durch Sachkonten dargestellt. Entscheiden Sie, ob diese Aussage richtig oder falsch ist.",
+    options: ["Richtig", "Falsch"],
+    correct: [0],
+    explanation: "Richtig. Jedes physische Bankkonto (Girokonto, Festgeld etc.) wird im SAP-System als eigenes Sachkonto im Hauptbuch geführt. Dies ermöglicht eine genaue Verfolgung der Geldbestände und -flüsse pro Bankverbindung. (Kapitel 7, Link: /module?id=s4f10)"
+},
+{
+    schwierigkeit: "mittel",
+    question: "Bevor die Details einer Bank in einem Geschäftspartner-Stammsatz erfasst werden können, muss diese Bank in das Bankenverzeichnis aufgenommen werden. Entscheiden Sie, ob diese Aussage richtig oder falsch ist.",
+    options: ["Richtig", "Falsch"],
+    correct: [1],
+    explanation: "Falsch. Obwohl es empfohlen wird, Banken zentral im Bankenverzeichnis anzulegen, können Bankdaten bei Bedarf auch direkt im Geschäftspartnerstammsatz erfasst werden. Das System legt dann automatisch einen Eintrag im Bankenverzeichnis an. (Kapitel 7, Link: /module?id=s4f10)"
+},
+{
+    schwierigkeit: "mittel",
+    question: "Wenn Sie einen Geschäftsvorfall auf der Registerkarte \"Ausgaben bar\" des Kassenbuchs erfassen, wird das Handkassenkonto automatisch im Soll bebucht. Entscheiden Sie, ob diese Aussage richtig oder falsch ist.",
+    options: ["Richtig", "Falsch"],
+    correct: [1],
+    explanation: "Falsch. Eine Barausgabe bedeutet, dass der Kassenbestand sinkt. Das Kassen-Sachkonto (Handkassenkonto) wird daher im Haben bebucht. Die Gegenbuchung erfolgt im Soll auf ein Aufwandskonto oder ein anderes Konto. (Kapitel 7, Link: /module?id=s4f10)"
+},
+{
+    // === WOCHE 5: S4F10 - KAPITEL 8 ===
+    schwierigkeit: "leicht",
+    question: "Mit dem Financial Closing Cockpit können Sie Ihre Abschlussarbeiten auf verschiedenen Organisationsebenen organisieren. Entscheiden Sie, ob diese Aussage richtig oder falsch ist.",
+    options: ["Richtig", "Falsch"],
+    correct: [0],
+    explanation: "Richtig. Das Financial Closing Cockpit ist ein flexibles Werkzeug zur Planung, Durchführung und Überwachung von Abschlussaktivitäten. Aufgaben können für verschiedene Organisationsebenen wie Buchungskreise, Kostenrechnungskreise etc. definiert und zugeordnet werden. (Kapitel 8, Link: /module?id=s4f10)"
+},
+{
+    schwierigkeit: "mittel",
+    question: "Erlöse und Kosten, die in einer bestimmten Buchungsperiode gebucht wurden, stammen oft aus einer anderen Periode und müssen abgegrenzt werden. Was bedeutet das?",
+    options: ["Sie müssen sofort in voller Höhe storniert werden.", "Sie dürfen erst im Folgejahr gebucht werden.", "Sie müssen über die Perioden verteilt werden, in denen sie entstehen.", "Sie werden auf ein Sperrkonto überwiesen, bis das Geschäftsjahr endet."],
+    correct: [2],
+    explanation: "Abgrenzung bedeutet die periodengerechte Zuordnung von Aufwand und Ertrag. Zum Beispiel wird eine im Voraus bezahlte Jahresmiete nicht komplett im Januar als Aufwand gebucht, sondern monatlich anteilig über das ganze Jahr verteilt. (Kapitel 8, Link: /module?id=s4f10)"
+},
+{
+    schwierigkeit: "schwer",
+    question: "Auf welches Konto überträgt das Programm zur WE/RE-Umgliederung den Saldo, wenn es im WE/RE-Konto beim Abschluss der Bücher einen Habensaldo für eine Einkaufstransaktion gibt?",
+    options: ["Gelieferte, aber nicht berechnete Waren", "Berechnete, aber nicht gelieferte Waren", "Skontoerträge", "Rückstellungen für drohende Verluste"],
+    correct: [0],
+    explanation: "Ein Habensaldo auf dem WE/RE-Verrechnungskonto bedeutet, dass mehr Warenwerte (WE) gebucht wurden als Rechnungswerte (RE). Für die Bilanz wird dieser Saldo auf das Konto 'Gelieferte, aber nicht berechnete Waren' umgegliedert, um eine korrekte Passivposition auszuweisen. (Kapitel 8, Link: /module?id=s4f10)"
+}
 ];
