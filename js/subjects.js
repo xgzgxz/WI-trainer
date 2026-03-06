@@ -23,7 +23,7 @@ export const subjects = [
         id: 'db',
         name: 'Datenbanken',
         questionFile: 'questions/db.js'
-    },
+    }/*,
     {
         id: 'english_mc',
         name: 'Englisch (Apology Exercise)',
@@ -38,5 +38,5 @@ export const subjects = [
         id: 'english_vocab2',
         name: 'Englisch (Financial times articles)',
         questionFile: 'questions/english_vocab2.js'
-    }
+    }*/
 ];
