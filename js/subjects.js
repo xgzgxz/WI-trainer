@@ -23,7 +23,14 @@ export const subjects = [
         id: 'db',
         name: 'Datenbanken',
         questionFile: 'questions/db.js'
-    }/*,
+    },
+    
+    {
+        id: 'sap_s4f10',
+        name: 'SAP S4f10',
+        questionFile: 'questions/sap_s4f10.js'
+    },
+    /*,
     {
         id: 'english_mc',
         name: 'Englisch (Apology Exercise)',
