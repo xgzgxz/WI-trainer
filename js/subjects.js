@@ -29,7 +29,9 @@ export const subjects = [
         id: 'sap_s4f10',
         name: 'SAP S4f10',
         questionFile: 'questions/sap_s4f10.js'
-    },
+    }
+    
+    /*,
     
     {
         id: 'english_mc',
@@ -45,5 +47,5 @@ export const subjects = [
         id: 'english_vocab2',
         name: 'Englisch (Financial times articles)',
         questionFile: 'questions/english_vocab2.js'
-    }
+    }*/
 ];
