@@ -361,7 +361,7 @@ export const questions = [
         options: ["Ausschließlich geplante Wartungsintervalle von Maschinen.", "Eine umfassende Übersicht für den Abschluss (Buchwerte zu Beginn/Ende des Jahres, Zugänge, Abgänge, Abschreibungen).", "Eine Liste aller Debitoren und deren offener Posten.", "Echtzeitdaten zu Mitarbeiterstunden, die an Maschinen gearbeitet wurden."],
         correct: [1],
         explanation: "Das Anlagengitter ist ein gesetzlich vorgeschriebener Bericht, der die Entwicklung des Anlagevermögens über ein Geschäftsjahr detailliert nachweist."
-    },
+    }/*,
     {
         // === WOCHE 5: S4F10 - KAPITEL 7 ===
         schwierigkeit: "leicht",
@@ -405,5 +405,5 @@ export const questions = [
         options: ["Gelieferte, aber nicht berechnete Waren", "Berechnete, aber nicht gelieferte Waren", "Skontoerträge", "Rückstellungen für drohende Verluste"],
         correct: [0],
         explanation: "Ein Habensaldo auf dem WE/RE-Verrechnungskonto bedeutet, dass mehr Waren geliefert (WE gebucht) als berechnet (RE gebucht) wurden. Für die Bilanz wird dieser Saldo auf das Konto 'Gelieferte, aber nicht gelieferte Waren' umgegliedert."
-    }
+    }*/
 ];
