@@ -60,6 +60,8 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    height: 100svh;
+    overflow: hidden;
     transition: background 0.3s ease, color 0.3s ease;
 }
 
@@ -68,20 +70,21 @@ body {
     background-color: var(--app-bg);
     width: 100%;
     max-width: 450px;
-    min-height: 100vh;
+    height: 100%;
     padding: 30px 25px;
     display: flex;
     flex-direction: column;
     position: relative;
     transition: background-color 0.3s ease;
     backdrop-filter: blur(10px);
+    overflow-y: auto;
 }
 
 @media (min-width: 480px) {
     .app-container {
-        min-height: 85vh;
-        border-radius: 40px; /* Bubbly! */
-        box-shadow: 0 20px 40px rgba(68, 54, 39, 0.15); /* Weicher Schatten in Taupe */
+        max-height: 85vh;
+        border-radius: 40px;
+        box-shadow: 0 20px 40px rgba(68, 54, 39, 0.15);
         margin: 20px 0;
     }
 }
@@ -107,6 +110,7 @@ body {
     transition: background-color 0.3s, box-shadow 0.3s;
     position: relative; 
     padding-top: 40px;
+    flex-shrink: 0;
 }
 
 h1 {
@@ -186,7 +190,7 @@ select:focus {
     width: 100%;
     padding: 18px;
     border: none;
-    border-radius: 30px; /* Sehr runde Ecken */
+    border-radius: 30px;
     font-size: 1.2rem;
     font-weight: bold;
     cursor: pointer;
@@ -194,6 +198,7 @@ select:focus {
     transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Bouncy Effekt */
     text-transform: uppercase;
     letter-spacing: 1px;
+    flex-shrink: 0;
 }
 
 .primary-btn {
@@ -229,11 +234,6 @@ body.dark-mode .secondary-btn:active {
      box-shadow: 0 0px 0 #3b4b5a;
 }
 
-#check-btn {
-    margin-top: 15px;
-    margin-bottom: 15px;
-}
-
 /* Quiz UI */
 .quiz-header {
     display: flex;
@@ -243,6 +243,7 @@ body.dark-mode .secondary-btn:active {
     gap: 8px;
      position: relative; 
     padding: 10px 0; 
+    flex-shrink: 0;
 }
 
 .badge {
@@ -268,6 +269,11 @@ body.dark-mode .badge {
     flex-direction: column;
     gap: 15px;
     margin-bottom: 20px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    flex-grow: 1;
+    padding: 8px;
+    margin: 0 -8px 20px -8px;
 }
 
 .option-btn {
@@ -282,6 +288,13 @@ body.dark-mode .badge {
     font-weight: 600;
     transition: all 0.2s;
     position: relative;
+    flex-shrink: 0; 
+}
+
+@media (hover: hover) {
+    .option-btn:hover {
+        transform: scale(1.02);
+    }
 }
 
 .option-btn:hover {
@@ -320,6 +333,7 @@ body.dark-mode .option-btn.selected {
     margin-bottom: 20px;
     border: 3px solid var(--select-border);
     transition: background-color 0.3s, border-color 0.3s;
+    flex-shrink: 0;
 }
 
 #feedback-text {
@@ -383,10 +397,28 @@ body.dark-mode .option-btn.selected {
     transform-style: preserve-3d;
     transition: transform 0.6s, opacity 0.2s;
     margin-bottom: 20px;
+      flex-grow: 1; 
+    display: flex;
+    flex-direction: column;
 }
 
 .vocab-card.flipped {
     transform: rotateY(180deg);
+}
+
+#vocab-feedback {
+    margin-top: auto;
+    text-align: center;
+}
+
+#vocab-feedback p {
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.vocab-eval-buttons {
+    display: flex;
+    gap: 15px;
 }
 
 .card-face {

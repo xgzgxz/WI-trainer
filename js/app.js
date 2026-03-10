@@ -14,7 +14,7 @@ const subjectSelect = document.getElementById('subject-select');
 const difficultySelect = document.getElementById('difficulty-select');
 const difficultyLabel = document.getElementById('difficulty-label');
 const finalScoreText = document.getElementById('final-score');
-const themeToggle = document.getElementById('theme-toggle'); // Zurück zur einzelnen ID
+const themeToggle = document.getElementById('theme-toggle');
 
 // Quiz-spezifische UI-Elemente
 const checkBtn = document.getElementById('check-btn');
@@ -49,7 +49,7 @@ let currentItem;
 let selectedAnswers = [];
 let isVocabTransitioning = false; 
 
-// --- DARK MODE LOGIK (wieder vereinfacht) ---
+// --- DARK MODE LOGIK ---
 function applyTheme(theme) {
     if (theme === 'dark') {
         document.body.classList.add('dark-mode');
@@ -216,6 +216,7 @@ function loadNextQuestion() {
     selectedAnswers = [];
     feedbackContainer.classList.add('hidden');
     checkBtn.classList.remove('hidden');
+    nextBtn.classList.add('hidden');
     checkBtn.disabled = true;
     checkBtn.style.opacity = "0.5";
     optionsContainer.innerHTML = '';
@@ -226,7 +227,6 @@ function loadNextQuestion() {
 
     // Logik zum Ein- und Ausblenden der Beenden-Buttons
     mcQuitBtn.classList.remove('hidden'); // Den "Beenden"-Button vor der Antwort anzeigen
-    endBtn.classList.add('hidden'); // Sicherstellen, dass der andere "Beenden"-Button versteckt ist
 
     currentItem.options.forEach((optionText, index) => {
         const button = document.createElement('button');
@@ -291,6 +291,7 @@ function checkAnswer() {
 
     feedbackContainer.classList.remove('hidden');
     checkBtn.classList.add('hidden');
+    nextBtn.classList.remove('hidden'); 
     
     // Logik zum Tauschen der Beenden-Buttons
     mcQuitBtn.classList.add('hidden'); // Jetzt den ersten "Beenden"-Button ausblenden...
@@ -357,12 +358,11 @@ difficultySelect.addEventListener('change', () => {
 
 startBtn.addEventListener('click', start);
 restartBtn.addEventListener('click', resetApp);
-themeToggle.addEventListener('change', handleThemeToggle); // Wieder ein einzelner Listener
+themeToggle.addEventListener('change', handleThemeToggle);
 
 // Quiz-Listener
 checkBtn.addEventListener('click', checkAnswer);
 nextBtn.addEventListener('click', loadNextQuestion);
-endBtn.addEventListener('click', showResult);
 mcQuitBtn.addEventListener('click', showResult);
 
 // Vokabel-Listener
