@@ -10,6 +10,7 @@ const resultScreen = document.getElementById('result-screen');
 // Allgemeine UI-Elemente
 const startBtn = document.getElementById('start-btn');
 const restartBtn = document.getElementById('restart-btn');
+const retryIncorrectBtn = document.getElementById('retry-incorrect-btn');
 const subjectSelect = document.getElementById('subject-select');
 const difficultySelect = document.getElementById('difficulty-select');
 const difficultyLabel = document.getElementById('difficulty-label');
@@ -43,6 +44,7 @@ const vocabQuitBtn = document.getElementById('vocab-quit-btn');
 
 let allQuestionsOfSubject = [];
 let currentItems = [];
+let incorrectItems = [];
 let playedCount = 0;
 let score = 0;
 let currentItem;
@@ -178,6 +180,7 @@ async function start() {
     currentItems = shuffleArray(currentItems);
     playedCount = 0;
     score = 0;
+    incorrectItems = [];
     startScreen.classList.add('hidden');
 
     // Weiche: Welcher Modus wird gestartet?
@@ -196,6 +199,30 @@ function showResult() {
     resultScreen.classList.remove('hidden');
     
     finalScoreText.innerText = `Du hast ${score} von ${playedCount} möglichen Punkten erreicht!`;
+
+        if (incorrectItems.length > 0) {
+        retryIncorrectBtn.classList.remove('hidden');
+        retryIncorrectBtn.innerText = `Falsche wiederholen (${incorrectItems.length})`;
+    } else {
+        retryIncorrectBtn.classList.add('hidden');
+    }
+}
+
+function retryIncorrect() {
+    currentItems = shuffleArray([...incorrectItems]); // Die falschen werden die neuen aktuellen
+    incorrectItems = []; // Für den zweiten Durchlauf wieder zurücksetzen
+    playedCount = 0;
+    score = 0;
+    
+    resultScreen.classList.add('hidden');
+
+    if (subjectSelect.value.startsWith('english_vocab')) {
+        vocabScreen.classList.remove('hidden');
+        loadNextVocab(null);
+    } else {
+        quizScreen.classList.remove('hidden');
+        loadNextQuestion();
+    }
 }
 
 function resetApp() {
@@ -283,6 +310,7 @@ function checkAnswer() {
         feedbackText.textContent = "Richtig!";
     } else {
         feedbackText.textContent = "Leider falsch.";
+        incorrectItems.push(currentItem); 
     }
     
     explanationText.textContent = currentItem.explanation || '';
@@ -340,6 +368,9 @@ function loadNextVocab(knewIt) {
 }
 
 function handleVocabAnswer(knewIt) {
+        if (knewIt === false) {
+        incorrectItems.push(currentItems[playedCount]);
+    }
     loadNextVocab(knewIt);
 }
 
@@ -359,6 +390,7 @@ difficultySelect.addEventListener('change', () => {
 startBtn.addEventListener('click', start);
 restartBtn.addEventListener('click', resetApp);
 themeToggle.addEventListener('change', handleThemeToggle);
+retryIncorrectBtn.addEventListener('click', retryIncorrect);
 
 // Quiz-Listener
 checkBtn.addEventListener('click', checkAnswer);

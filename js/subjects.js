@@ -1,37 +1,36 @@
 export const subjects = [
-    {
-        id: 'bwl',
-        name: 'BWL',
-        questionFile: 'questions/bwl.js'
-    },
-    {
-        id: 'java',
-        name: 'JAVA',
-        questionFile: 'questions/java.js'
-    },
-    {
-        id: 'abap',
-        name: 'ABAP',
-        questionFile: 'questions/abap.js'
-    },
-    {
-        id: 'sap',
-        name: 'SAP', 
-        questionFile: 'questions/sap.js'
-    },
-    {
-        id: 'db',
-        name: 'Datenbanken',
-        questionFile: 'questions/db.js'
-    },
-    
-    {
-        id: 'sap_s4f10',
-        name: 'SAP S4f10',
-        questionFile: 'questions/sap_s4f10.js'
-    }
-    
-    /*,
+  {
+    id: "bwl",
+    name: "BWL",
+    questionFile: "questions/bwl.js",
+  },
+  {
+    id: "java",
+    name: "JAVA",
+    questionFile: "questions/java.js",
+  },
+  {
+    id: "abap",
+    name: "ABAP",
+    questionFile: "questions/abap.js",
+  },
+  {
+    id: "sap",
+    name: "SAP",
+    questionFile: "questions/sap.js",
+  },
+  {
+    id: "db",
+    name: "Datenbanken",
+    questionFile: "questions/db.js",
+  },
+
+  {
+    id: "sap_s4f10",
+    name: "SAP S4F10",
+    questionFile: "questions/sap_s4f10.js",
+  }
+  /*,
     
     {
         id: 'english_mc',
