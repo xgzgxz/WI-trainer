@@ -93,6 +93,17 @@ body {
     }
 }
 
+/* --- ENTWICKLER VERSIONSTAG --- */
+.dev-version {
+    position: absolute;
+    bottom: 5px;
+    right: 15px;
+    font-size: 0.65rem;
+    opacity: 0.2; 
+    color: var(--text-color);
+    pointer-events: none;
+}
+
 .screen {
     flex: 1;
     display: flex;
