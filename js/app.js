@@ -51,6 +51,17 @@ let currentItem;
 let selectedAnswers = [];
 let isVocabTransitioning = false; 
 
+// --- VIEWPORT FIX FÜR MOBILE BROWSER ---
+function setViewportHeight() {
+    // Holt die echte, sichtbare innere Höhe in Pixeln und teilt sie durch 100
+    let vh = window.innerHeight * 0.01;
+    // Setzt eine CSS-Variable '--vh', die wir in der style.css nutzen
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
+// Einmal beim Start ausführen und bei jeder Änderung der Fenstergröße
+window.addEventListener('resize', setViewportHeight);
+setViewportHeight();
+
 // --- DARK MODE LOGIK ---
 function applyTheme(theme) {
     if (theme === 'dark') {
