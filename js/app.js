@@ -215,7 +215,35 @@ function showResult() {
   vocabScreen.classList.add("hidden");
   resultScreen.classList.remove("hidden");
 
-  finalScoreText.innerText = `Du hast ${score} von ${playedCount} möglichen Punkten erreicht!`;
+  // Prozentzahl berechnen (verhindert Fehler, falls man sofort auf Beenden klickt)
+  let percentage = 0;
+  if (playedCount > 0) {
+    percentage = (score / playedCount) * 100;
+  }
+
+  // Bestanden / Nicht bestanden Logik
+  let passStatus = "";
+  let statusColor = "";
+
+  if (playedCount === 0) {
+    passStatus = "Keine Fragen beantwortet.";
+    statusColor = "var(--text-color)";
+  } else if (percentage >= 60) {
+    passStatus = "Bestanden! 🎉";
+    statusColor = "#27ae60"; // Ein schönes Grün (aus deinem CSS)
+  } else {
+    passStatus = "Nicht bestanden. 😢";
+    statusColor = "#e74c3c"; // Ein auffälliges Rot (aus deinem CSS)
+  }
+
+  // Den Text und das Ergebnis schön formatiert in den HTML-Container einfügen
+  finalScoreText.innerHTML = `
+    Du hast <strong>${score}</strong> von <strong>${playedCount}</strong> möglichen Punkten erreicht!<br><br>
+    <span style="display: inline-block; margin-top: 10px; font-size: 1.6rem; font-weight: 900; color: ${statusColor};">
+        ${passStatus}
+    </span>
+    ${playedCount > 0 ? `<br><span style="font-size: 1.1rem; opacity: 0.8; color: var(--text-color);">(${Math.round(percentage)}% richtig)</span>` : ""}
+  `;
 
   if (incorrectItems.length > 0) {
     retryIncorrectBtn.classList.remove("hidden");
