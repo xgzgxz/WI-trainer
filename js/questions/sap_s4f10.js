@@ -31,8 +31,15 @@ export const questions = [
     {
         // === WOCHE 5: S4F10 - KAPITEL 2 ===
         schwierigkeit: "mittel",
-        question: "Nennen Sie mindestens drei Komponenten der Finanzbuchhaltung in SAP S/4HANA. (Mehrere Antworten möglich)",
+        question: "Nennen Sie die Komponenten der Finanzbuchhaltung in SAP S/4HANA. (Mehrere Antworten möglich)",
         options: ["FI-GL (Hauptbuchhaltung)", "FI-AP (Kreditorenbuchhaltung)", "FI-AR (Debitorenbuchhaltung)", "FI-AA (Anlagenbuchhaltung)", "FI-BL (Bankbuchhaltung)", "CO-OM (Gemeinkostencontrolling)", "MM-PUR (Einkauf)"],
+        correct: [0, 1, 2, 3, 4],
+        explanation: "Die Kernkomponenten des FI-Moduls umfassen Hauptbuchhaltung (GL), Kreditoren- (AP), Debitoren- (AR), Anlagen- (AA) und Bankbuchhaltung (BL)."
+    },
+     {
+        schwierigkeit: "schwer",
+        question: "Nennen Sie die Komponenten der Finanzbuchhaltung in SAP S/4HANA.",
+        options: ["Hauptbuchhaltung", "Kreditorenbuchhaltung", "Debitorenbuchhaltung", "Anlagenbuchhaltung)", "Bankbuchhaltung", "Gemeinkostencontrolling", "Einkauf"],
         correct: [0, 1, 2, 3, 4],
         explanation: "Die Kernkomponenten des FI-Moduls umfassen Hauptbuchhaltung (GL), Kreditoren- (AP), Debitoren- (AR), Anlagen- (AA) und Bankbuchhaltung (BL)."
     },

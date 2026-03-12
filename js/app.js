@@ -230,10 +230,10 @@ function showResult() {
     statusColor = "var(--text-color)";
   } else if (percentage >= 60) {
     passStatus = "Bestanden! 🎉";
-    statusColor = "#27ae60"; // Ein schönes Grün (aus deinem CSS)
+    statusColor = "#27ae60";
   } else {
     passStatus = "Nicht bestanden. 😢";
-    statusColor = "#e74c3c"; // Ein auffälliges Rot (aus deinem CSS)
+    statusColor = "#e74c3c";
   }
 
   // Den Text und das Ergebnis schön formatiert in den HTML-Container einfügen
