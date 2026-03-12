@@ -266,7 +266,7 @@ export const questions = [
     {
         schwierigkeit: "mittel",
         question: "Wie kann eingesehen werden, ob ein Debitor gemahnt wurde? Wählen Sie die richtige Antwort.",
-        options: ["Sie sehen im Korrespondenzbereich des Debitorenstammsatzes nach.", "Sie prüfen die Einzelpostendetails im Debitorenkonto.", "Sowohl A als auch B.", "Keine der genannten Möglichkeiten."],
+        options: ["A: Sie sehen im Korrespondenzbereich des Debitorenstammsatzes nach.", "B: Sie prüfen die Einzelpostendetails im Debitorenkonto.", "C: Sowohl A als auch B.", "D: Keine der genannten Möglichkeiten."],
         correct: [2],
         explanation: "Das Datum der letzten Mahnung und die Mahnstufe werden sowohl im Stammsatz des Debitors (Korrespondenz-Tab) als auch in den Details des gemahnten offenen Postens gespeichert."
     },
